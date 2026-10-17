@@ -1,0 +1,15 @@
+/* ==================================================================
+   MEHUL MUNJAPARA — PORTFOLIO DESIGN SYSTEM
+   Master Stylesheet linking main.css, home-page.css, content.css
+   Brand Colors: #0B1B3B (Navy), #1A6DF0 (Blue), #4A93FF (Accent), #F7F7F8 (Bg)
+   ================================================================== */
+
+@import url('./main.css');
+@import url('./home-page.css');
+@import url('./content.css');
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}

@@ -1,0 +1,2521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @seo -->
+    <title>
+      Mehul Munjapara | Senior Shopify Developer &amp; UI/UX Designer
+    </title>
+    <meta
+      name="description"
+      content="Shopify developer building custom, fast, conversion-focused storefronts for ambitious brands. View projects and get in touch."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Mehul Munjapara | Shopify Developer &amp; Designer"
+    />
+    <meta
+      property="og:description"
+      content="Shopify developer building custom, fast, conversion-focused storefronts for ambitious brands. View projects and get in touch."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="google-site-verification"
+      content="dRpK0eszwiReirc0mE5Xz3mptLx7JjtVY4YTFbcLDxE"
+    />
+    <!-- @/seo -->
+    <!-- @head -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/m-icon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#F7F7F8" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <!-- @/head -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/home-page.css" />
+    <link rel="stylesheet" href="./css/content.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- @header --><!-- ============ 1) PRIMARY HEADER (normal flow) ============ -->
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header" id="mainHeader">
+      <div class="container">
+        <div class="header_wrapper">
+          <a
+            href="#home"
+            class="header_logo"
+            aria-label="Mehul Munjapara — home"
+          >
+            <img
+              class="header_logo-icon"
+              src="./logo/logo-light.png"
+              alt="Mehul Munjapara"
+              width="165"
+              height="35"
+            />
+          </a>
+          <nav class="header_nav" aria-label="Primary">
+            <ul class="header_nav-list">
+              <li>
+                <a href="#home" class="header_nav-link" aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li><a href="#work" class="header_nav-link">Projects</a></li>
+              <li><a href="#benefits" class="header_nav-link">Benefits</a></li>
+              <li><a href="#process" class="header_nav-link">Process</a></li>
+              <li><a href="#services" class="header_nav-link">Services</a></li>
+              <li><a href="#why" class="header_nav-link">Why Me</a></li>
+              <li>
+                <a href="#testimonials" class="header_nav-link">Reviews</a>
+              </li>
+              <li><a href="#faq" class="header_nav-link">FAQ</a></li>
+            </ul>
+          </nav>
+          <a href="#contact" class="header_cta">
+            <span>Let's talk</span>
+            <span class="header_cta-badge">
+              <svg
+                class="header_cta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg>
+            </span>
+          </a>
+          <button
+            class="header_toggle"
+            data-menu-toggle
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="headerMobileOverlay"
+          >
+            <span class="header_toggle-bar"></span>
+            <span class="header_toggle-bar"></span>
+            <span class="header_toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ 2) GHOST STICKY HEADER (fixed, hidden until scrolled) ============ -->
+    <header class="header-ghost" id="ghostHeader" aria-hidden="true" inert>
+      <div class="header_wrapper">
+        <a href="#home" class="header_logo" aria-label="Mehul Munjapara — home">
+          <img
+            class="header_logo-icon"
+            src="./logo/logo-light.png"
+            alt="Mehul Munjapara"
+            width="165"
+            height="35"
+          />
+        </a>
+        <nav class="header_nav" aria-label="Primary (sticky)">
+          <ul class="header_nav-list">
+            <li>
+              <a href="#home" class="header_nav-link" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li><a href="#work" class="header_nav-link">Projects</a></li>
+            <li><a href="#benefits" class="header_nav-link">Benefits</a></li>
+            <li><a href="#process" class="header_nav-link">Process</a></li>
+            <li><a href="#services" class="header_nav-link">Services</a></li>
+            <li><a href="#why" class="header_nav-link">Why Me</a></li>
+            <li><a href="#testimonials" class="header_nav-link">Reviews</a></li>
+            <li><a href="#faq" class="header_nav-link">FAQ</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="header_cta">
+          <span>Let's talk</span>
+          <span class="header_cta-badge">
+            <svg
+              class="header_cta-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17L17 7M17 7H8M17 7V16" />
+            </svg>
+          </span>
+        </a>
+        <button
+          class="header_toggle"
+          data-menu-toggle
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="headerMobileOverlay"
+        >
+          <span class="header_toggle-bar"></span>
+          <span class="header_toggle-bar"></span>
+          <span class="header_toggle-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ SHARED MOBILE POPUP ============ -->
+    <div class="header_mobile-overlay" id="headerMobileOverlay">
+      <div
+        class="header_mobile-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+      >
+        <ul class="header_mobile-list">
+          <li class="header_mobile-item">
+            <a href="#home" class="header_mobile-link" aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="header_mobile-item">
+            <a href="#work" class="header_mobile-link">Projects</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#benefits" class="header_mobile-link">Benefits</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#process" class="header_mobile-link">Process</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#services" class="header_mobile-link">Services</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#why" class="header_mobile-link">Why Me</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#testimonials" class="header_mobile-link">Reviews</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#faq" class="header_mobile-link">FAQ</a>
+          </li>
+          <li class="header_mobile-item">
+            <a href="#contact" class="header_mobile-link">Contact</a>
+          </li>
+        </ul>
+        <div class="header_mobile-footer">
+          <a href="#contact" class="btn btn--primary" style="width: 100%">
+            <span>Let's talk</span>
+            <span class="btn__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- @/header -->
+    <main id="main">
+      <section class="hero-section" id="home">
+        <div class="container">
+          <div
+            class="hero-section_panel"
+            data-animate-group
+            data-animate-threshold="0.3"
+          >
+            <div class="hero-section_content">
+              <h1
+                class="hero-section_heading"
+                aria-label="Shopify stores built to stand out"
+              >
+                <span class="hero-section_heading-line" data-animate="chars"
+                  >Shopify stores</span
+                ><span class="hero-section_heading-line" data-animate="chars"
+                  >built to
+                  <span class="hero-section_heading-stand-out"
+                    >stand out</span
+                  ></span
+                >
+              </h1>
+              <p class="hero-section_description" data-animate="fade-up">
+                I help ambitious brands turn ideas into refined Shopify
+                experiences — combining thoughtful design, clean development,
+                and conversion-focused ecommerce.
+              </p>
+              <div class="hero-section_btn-wrapper" data-animate="fade-up">
+                <a
+                  href="#work"
+                  class="hero-section_btn hero-section_btn--primary"
+                >
+                  <span>View projects</span>
+                  <span class="btn__icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href="#contact"
+                  class="hero-section_btn hero-section_btn--secondary"
+                >
+                  <span>Get in touch</span>
+                  <span class="btn__icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="hero-section_stats" data-animate="fade-up">
+                <div class="hero-section_stat">
+                  <span
+                    class="hero-section_stat-number"
+                    data-count-to="20"
+                    data-suffix="+"
+                    >0+</span
+                  >
+                  <span class="hero-section_stat-label"
+                    >Projects completed</span
+                  >
+                </div>
+                <div class="hero-section_stat">
+                  <span
+                    class="hero-section_stat-number"
+                    data-count-to="8"
+                    data-suffix="yr"
+                    >0yr</span
+                  >
+                  <span class="hero-section_stat-label">Experience</span>
+                </div>
+                <div class="hero-section_stat">
+                  <span
+                    class="hero-section_stat-number"
+                    data-count-to="35"
+                    data-suffix="+"
+                    >0+</span
+                  >
+                  <span class="hero-section_stat-label">Happy clients</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hero-section_image-wrapper"
+              data-animate="fade-up"
+              data-animate-delay="80"
+            >
+              <img
+                class="hero-section_image"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+                src="./assets/img/hero-portrait.webp"
+                width="1160"
+                height="1360"
+                alt="Portrait of Mehul Munjapara, Shopify developer"
+              />
+              <div class="hero-section_card">
+                <div>
+                  <span class="hero-section_card-eyebrow">Select project</span>
+                  <p class="hero-section_card-title">Available for projects</p>
+                  <p class="hero-section_card-text">
+                    Share a few details, and I'll get back with a clear
+                    direction.
+                  </p>
+                </div>
+                <a
+                  href="#contact"
+                  class="hero-section_card-button"
+                  aria-label="Contact me"
+                >
+                  <img
+                    src="./assets/svg/down_left_arrow.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ════════════════════════════════════════════════
+         LOGO MARQUEE
+         ════════════════════════════════════════════════ -->
+      <section class="logo-marquee" aria-label="Tools & platforms">
+        <div class="container">
+          <div class="logo-marquee__viewport">
+            <div class="logo-marquee__track">
+              <!-- SET 1 -->
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#7AB55C"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-1.009-.434-1.792-.271-1.869z"
+                  />
+                </svg>
+                Shopify Plus
+              </div>
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#F7DF1E"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.017-.888-1.798-2.876-2.607-1.196-.525-1.61-.832-1.61-1.363 0-.437.35-.788 1.05-.788.665 0 1.05.28 1.382.805l1.628-1.033c-.56-.91-1.435-1.47-2.975-1.47-1.925 0-3.132 1.068-3.132 2.643 0 1.627 1.015 2.38 2.678 3.063 1.295.542 1.68.875 1.68 1.505 0 .542-.49.892-1.225.892-.98 0-1.47-.56-1.89-1.33l-1.662 1.015c.612 1.208 1.645 1.908 3.517 1.908 2.223 0 3.238-1.12 3.238-2.735l.002-.508zm-8.085-6.302h-2.188v6.79c0 1.505-.77 2.03-1.89 2.03-.49 0-.892-.088-1.172-.21l-.315 1.628c.385.14 1.015.28 1.768.28 2.205 0 3.797-1.172 3.797-3.727v-6.791h-.001z"
+                  />
+                </svg>
+                JavaScript (ES6+)
+              </div>
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#F24E1E"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.354 3.019-3.02s-1.354-3.02-3.019-3.02h-3.117V7.51zm0 1.471H8.148C5.672 8.981 3.658 6.967 3.658 4.49S5.672 0 8.148 0h4.587v8.981zm-4.587-7.51c-1.665 0-3.019 1.354-3.019 3.02s1.354 3.02 3.019 3.02h3.116V1.471H8.148zm0 13.548c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.587v8.98H8.148zm0-7.509c-1.665 0-3.019 1.354-3.019 3.019s1.354 3.019 3.019 3.019h3.116V7.51H8.148zm4.587 7.509H8.148c-2.476 0-4.49 2.014-4.49 4.491 0 2.476 2.014 4.49 4.49 4.49s4.487-2.014 4.487-4.49v-4.491zm-4.587 7.51c-1.665 0-3.019-1.355-3.019-3.02 0-1.665 1.354-3.019 3.019-3.019h3.116v3.019c0 1.665-1.354 3.02-3.116 3.02zm4.587-7.51h4.588c2.476 0 4.49-2.014 4.49-4.491s-2.014-4.49-4.49-4.49h-4.588v8.981zm3.117-7.509c1.665 0 3.019 1.354 3.019 3.019s-1.354 3.02-3.019 3.02h-3.117V7.51h3.117z"
+                  />
+                </svg>
+                Figma
+              </div>
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#47C1BF"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                Liquid Engine
+              </div>
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#38BDF8"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                  />
+                </svg>
+                Tailwind CSS
+              </div>
+              <div class="logo-marquee__item">
+                <svg
+                  class="logo-icon"
+                  fill="#E37400"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109V8.043c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855zm-7.7909 6.2235v11.7752c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109V14.2665c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855zm-7.7908 6.2235v5.5517c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109v-5.4203c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855z"
+                  />
+                </svg>
+                Google Analytics 4
+              </div>
+              <!-- SET 2 — DUPLICATE FOR SEAMLESS LOOP -->
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#7AB55C"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-1.009-.434-1.792-.271-1.869z"
+                  />
+                </svg>
+                Shopify Plus
+              </div>
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#F7DF1E"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.017-.888-1.798-2.876-2.607-1.196-.525-1.61-.832-1.61-1.363 0-.437.35-.788 1.05-.788.665 0 1.05.28 1.382.805l1.628-1.033c-.56-.91-1.435-1.47-2.975-1.47-1.925 0-3.132 1.068-3.132 2.643 0 1.627 1.015 2.38 2.678 3.063 1.295.542 1.68.875 1.68 1.505 0 .542-.49.892-1.225.892-.98 0-1.47-.56-1.89-1.33l-1.662 1.015c.612 1.208 1.645 1.908 3.517 1.908 2.223 0 3.238-1.12 3.238-2.735l.002-.508zm-8.085-6.302h-2.188v6.79c0 1.505-.77 2.03-1.89 2.03-.49 0-.892-.088-1.172-.21l-.315 1.628c.385.14 1.015.28 1.768.28 2.205 0 3.797-1.172 3.797-3.727v-6.791h-.001z"
+                  />
+                </svg>
+                JavaScript (ES6+)
+              </div>
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#F24E1E"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.354 3.019-3.02s-1.354-3.02-3.019-3.02h-3.117V7.51zm0 1.471H8.148C5.672 8.981 3.658 6.967 3.658 4.49S5.672 0 8.148 0h4.587v8.981zm-4.587-7.51c-1.665 0-3.019 1.354-3.019 3.02s1.354 3.02 3.019 3.02h3.116V1.471H8.148zm0 13.548c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.587v8.98H8.148zm0-7.509c-1.665 0-3.019 1.354-3.019 3.019s1.354 3.019 3.019 3.019h3.116V7.51H8.148zm4.587 7.509H8.148c-2.476 0-4.49 2.014-4.49 4.491 0 2.476 2.014 4.49 4.49 4.49s4.487-2.014 4.487-4.49v-4.491zm-4.587 7.51c-1.665 0-3.019-1.355-3.019-3.02 0-1.665 1.354-3.019 3.019-3.019h3.116v3.019c0 1.665-1.354 3.02-3.116 3.02zm4.587-7.51h4.588c2.476 0 4.49-2.014 4.49-4.491s-2.014-4.49-4.49-4.49h-4.588v8.981zm3.117-7.509c1.665 0 3.019 1.354 3.019 3.019s-1.354 3.02-3.019 3.02h-3.117V7.51h3.117z"
+                  />
+                </svg>
+                Figma
+              </div>
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#47C1BF"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                Liquid Engine
+              </div>
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#38BDF8"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                  />
+                </svg>
+                Tailwind CSS
+              </div>
+              <div class="logo-marquee__item" aria-hidden="true">
+                <svg
+                  class="logo-icon"
+                  fill="#E37400"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109V8.043c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855zm-7.7909 6.2235v11.7752c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109V14.2665c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855zm-7.7908 6.2235v5.5517c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6375-1.5638-2.6074-3.109v-5.4203c0-1.649 1.3418-2.9855 2.9908-2.9855 1.649 0 2.9854 1.3365 2.9854 2.9855z"
+                  />
+                </svg>
+                Google Analytics 4
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- @featured-projects -->
+      <section class="work-section" id="work" aria-labelledby="work-heading">
+        <div class="container">
+          <div
+            class="section-head"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <span class="pill pill--badge" data-animate="fade-up"
+              >Portfolio</span
+            >
+            <h2
+              class="section-head__heading"
+              id="work-heading"
+              data-animate="fade-up"
+            >
+              Selected work
+            </h2>
+            <p class="section-head__text" data-animate="fade-up">
+              A look at recent Shopify projects, from custom themes to
+              performance and conversion work.
+            </p>
+          </div>
+          <div class="work-grid work-grid--featured">
+            <!-- Project 01: Blind Tiger Coffee Roasters -->
+            <article class="work-card" data-item data-category="shopify-plus">
+              <div
+                class="work-media work-media--card"
+                style="--accent: #efe9df"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-blindtiger.webp"
+                  alt="Blind Tiger Coffee Roasters Shopify Plus store"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">Shopify Plus</span>
+                  <span class="work-card__year">Specialty Coffee Roaster</span>
+                </div>
+                <h3 class="work-card__title">Blind Tiger Coffee Roasters</h3>
+                <p class="work-card__text">
+                  A custom Shopify Plus storefront built for specialty coffee
+                  roasters featuring automated recurring subscriptions, custom
+                  Liquid product builders, and a 96 mobile PageSpeed score.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Shopify Plus</li>
+                  <li>Subscriptions</li>
+                  <li>Custom Liquid</li>
+                  <li>Speed 96</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 02: Cook's Union -->
+            <article class="work-card" data-item data-category="custom-theme">
+              <div
+                class="work-media work-media--card"
+                style="--accent: #e7eaf0"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-cooksunion.webp"
+                  alt="Cook's Union culinary equipment store"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">Custom Theme</span>
+                  <span class="work-card__year">Culinary & Kitchenware</span>
+                </div>
+                <h3 class="work-card__title">Cook's Union</h3>
+                <p class="work-card__text">
+                  Bespoke culinary equipment storefront converted pixel-perfect
+                  from Figma to Shopify, with faceted catalog filtering, smooth
+                  drawer carts, and wholesale B2B pricing.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Custom Theme</li>
+                  <li>Figma to Shopify</li>
+                  <li>Facet Filters</li>
+                  <li>B2B Portal</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 03: DART Performance -->
+            <article
+              class="work-card"
+              data-item
+              data-category="performance-and-cro"
+            >
+              <div
+                class="work-media work-media--card"
+                style="--accent: #e8ecef"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-dart.webp"
+                  alt="DART Performance racing parts store"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">High SKU Store</span>
+                  <span class="work-card__year">Automotive & Racing</span>
+                </div>
+                <h3 class="work-card__title">DART Performance</h3>
+                <p class="work-card__text">
+                  High-performance automotive storefront designed to navigate
+                  massive SKU catalogs with dynamic year/make/model fitment
+                  selectors, instant search, and optimized mobile UX.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Fitment Selector</li>
+                  <li>High SKU Count</li>
+                  <li>Speed & CRO</li>
+                  <li>Mobile UX</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 04: EcoFox Lifestyle -->
+            <article class="work-card" data-item data-category="store-redesign">
+              <div
+                class="work-media work-media--card"
+                style="--accent: #e2ece5"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-ecofox.webp"
+                  alt="EcoFox sustainable lifestyle store"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">Store Redesign</span>
+                  <span class="work-card__year">Sustainable Living</span>
+                </div>
+                <h3 class="work-card__title">EcoFox Lifestyle</h3>
+                <p class="work-card__text">
+                  A high-converting redesign for an eco-conscious brand
+                  featuring modular bundle builders, sticky add-to-cart drawers,
+                  and a 98 PageSpeed score.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Product Page Redesign</li>
+                  <li>Sticky Cart</li>
+                  <li>Bundle Logic</li>
+                  <li>PageSpeed 98</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 05: Metpure Water Filtration -->
+            <article class="work-card" data-item data-category="b2b-and-d2c">
+              <div
+                class="work-media work-media--card"
+                style="--accent: #e3ebf0"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-metpure.webp"
+                  alt="Metpure water filtration systems"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">B2B & D2C</span>
+                  <span class="work-card__year">Filtration Systems</span>
+                </div>
+                <h3 class="work-card__title">Metpure Water Filtration</h3>
+                <p class="work-card__text">
+                  Hybrid B2B and D2C Shopify architecture featuring tiered
+                  quantity breaks, quick-order wholesale forms, downloadable
+                  specification sheets, and trade account management.
+                </p>
+                <ul class="work-card__tags">
+                  <li>B2B Wholesale</li>
+                  <li>Quantity Breaks</li>
+                  <li>Quick Order</li>
+                  <li>Spec Sheets</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 06: Trapleuningen NL -->
+            <article
+              class="work-card"
+              data-item
+              data-category="custom-configurator"
+            >
+              <div
+                class="work-media work-media--card"
+                style="--accent: #ebe8e1"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-trapleuningen.webp"
+                  alt="Trapleuningen architectural handrails"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">Custom Configurator</span>
+                  <span class="work-card__year">Architectural Handrails</span>
+                </div>
+                <h3 class="work-card__title">Trapleuningen NL</h3>
+                <p class="work-card__text">
+                  A bespoke architectural storefront with an interactive
+                  3D/dimension custom handrail configurator, live price
+                  calculations, and multi-language European market routing.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Custom Configurator</li>
+                  <li>Dimension Inputs</li>
+                  <li>Multi-Language</li>
+                  <li>EU Markets</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- @/featured-projects -->
+      <section class="benefits-section" id="benefits">
+        <div class="container">
+          <!-- Section header -->
+          <div
+            class="benefits-section_header"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <span class="benefits-section_badge" data-animate="fade-up">
+              Benefits
+            </span>
+            <h2 class="benefits-section_heading" data-animate="fade-up">
+              Discover why we stand out
+            </h2>
+            <p class="benefits-section_description" data-animate="fade-up">
+              I build clean, responsive Shopify experiences that communicate
+              clearly, guide customers smoothly, and help ambitious brands grow
+              online.
+            </p>
+          </div>
+          <!-- Cards -->
+          <div
+            class="benefits-section_cards"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <!-- CARD 01 -->
+            <article class="benefit-card" data-animate="fade-up">
+              <div class="benefit-card_visual benefit-card_visual--brand">
+                <img
+                  src="./assets/img/benefit-crafted-for-your-brand.webp"
+                  alt="crafted for your brand"
+                  width="900"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="benefit-card_content">
+                <h3 class="benefit-card_title">Crafted for your brand</h3>
+                <p class="benefit-card_text">
+                  Custom Shopify storefronts designed around your brand,
+                  products, and customers — never a one-size-fits-all theme.
+                </p>
+              </div>
+            </article>
+            <!-- CARD 02 -->
+            <article class="benefit-card" data-animate="fade-up">
+              <div class="benefit-card_visual benefit-card_visual--conversion">
+                <img
+                  src="./assets/img/benefit-built-to-convert.webp"
+                  alt="built to convert"
+                  width="900"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="benefit-card_content">
+                <h3 class="benefit-card_title">Built to convert</h3>
+                <p class="benefit-card_text">
+                  Thoughtful UX, clear product journeys, and frictionless
+                  shopping experiences designed to turn more visitors into
+                  customers.
+                </p>
+              </div>
+            </article>
+            <!-- CARD 03 -->
+            <article class="benefit-card" data-animate="fade-up">
+              <div class="benefit-card_visual benefit-card_visual--shopify">
+                <img
+                  src="./assets/img/benefit-fast-and-flexible.webp"
+                  alt="fast and flexible"
+                  width="900"
+                  height="675"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="benefit-card_content">
+                <h3 class="benefit-card_title">Fast & flexible</h3>
+                <p class="benefit-card_text">
+                  Clean, responsive Shopify development with custom sections,
+                  functionality, and integrations built to perform across every
+                  device.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="why-section" id="why">
+        <div class="container">
+          <!-- Section header -->
+          <div
+            class="why-section_header"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <div class="why-section_header-left">
+              <span class="why-section_badge" data-animate="fade-up"
+                >Why choose me</span
+              >
+              <h2 class="why-section_heading" data-animate="fade-up">
+                Shopify experiences built <br />around clarity
+              </h2>
+            </div>
+            <p class="why-section_description" data-animate="fade-up">
+              I combine thoughtful design, clean Shopify development, and
+              conversion-focused thinking to create storefronts that look
+              distinctive, feel effortless to use, and help ambitious brands
+              grow.
+            </p>
+          </div>
+
+          <!-- Bento grid -->
+          <div
+            class="why-section_grid"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <!-- Col 1 · Row 1 — clients -->
+            <article class="why-card why-card--clients" data-animate="fade-up">
+              <div class="why-card_avatars">
+                <span class="why-card_avatar why-card_avatar--1">
+                  <img
+                    src="./assets/img/avatar-rohan.webp"
+                    alt="Rohan Avatar"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <span class="why-card_avatar why-card_avatar--2">
+                  <img
+                    src="./assets/img/Person-2.webp"
+                    alt="Persona 2 Avatar"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <span class="why-card_avatar why-card_avatar--3">
+                  <img
+                    src="./assets/img/avatar-refik.webp"
+                    alt="Refik Avatar"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <span class="why-card_avatar why-card_avatar--4">
+                  <img
+                    src="./assets/img/avatar-susanna.webp"
+                    alt="Susanna Avatar"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+              </div>
+              <span class="why-card_clients-label">20+ Happy clients</span>
+            </article>
+
+            <!-- Col 2 · Row 1 — services text -->
+            <article class="why-card why-card--services" data-animate="fade-up">
+              <p class="why-card_body-text">
+                From custom storefronts to focused Shopify improvements, I build
+                digital experiences around real business goals.
+              </p>
+            </article>
+
+            <!-- Col 3 · Rows 1–3 — dark feature card -->
+            <article
+              class="why-card why-card--dark"
+              data-animate="fade-up"
+              data-animate-delay="80"
+            >
+              <p class="why-card_quote">
+                Trusted by founders and growing teams to turn ideas into
+                polished, high-performing Shopify stores.
+              </p>
+              <div class="why-card_rating">
+                <span class="why-card_rating-number">4.9</span>
+                <div class="why-card_rating-info">
+                  <div class="why-card_stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                  <span class="why-card_rating-label"
+                    >Trusted by clients worldwide</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Col 1 · Row 2 — direction text -->
+            <article
+              class="why-card why-card--direction"
+              data-animate="fade-up"
+            >
+              <p class="why-card_body-text">
+                Years of hands-on experience designing and developing responsive
+                ecommerce experiences for modern brands.
+              </p>
+            </article>
+
+            <!-- Col 2 · Row 2 — projects stat -->
+            <article class="why-card why-card--projects" data-animate="fade-up">
+              <span class="why-card_number" data-count-to="20" data-suffix="+"
+                >20+</span
+              >
+              <span class="why-card_stat-label">Projects completed</span>
+            </article>
+
+            <!-- Col 1 · Row 3 — satisfaction stat -->
+            <article
+              class="why-card why-card--satisfaction"
+              data-animate="fade-up"
+            >
+              <span class="why-card_number" data-count-to="92" data-suffix="%"
+                >92%</span
+              >
+              <span class="why-card_stat-label">Client satisfaction</span>
+            </article>
+
+            <!-- Col 2 · Row 3 — available -->
+            <article
+              class="why-card why-card--available"
+              data-animate="fade-up"
+            >
+              <span class="why-card_dot" aria-hidden="true"></span>
+              <span class="why-card_available-text"
+                >Available for projects</span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="process-section" id="process">
+        <div class="container">
+          <div class="process-section_inner">
+            <!-- Intro (sticky on desktop) -->
+            <div class="process-section_intro">
+              <span class="process-section_badge">Process</span>
+              <h2 class="process-section_heading">
+                How I Build Shopify Experiences That Perform
+              </h2>
+              <p class="process-section_description">
+                A clear, collaborative process that takes your store from an
+                initial idea to a polished, high-performing Shopify experience
+                built around your brand, customers, and business goals.
+              </p>
+            </div>
+
+            <!-- Scroll-linked timeline -->
+            <div class="process-section_timeline">
+              <ol class="process-section_list" data-process-list>
+                <!-- Track (behind icons) + fill (grows with scroll progress) -->
+                <div
+                  class="process-section_track"
+                  data-process-track
+                  aria-hidden="true"
+                >
+                  <div
+                    class="process-section_track-fill"
+                    data-process-fill
+                  ></div>
+                </div>
+
+                <!-- STEP 01 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="109"
+                      height="109"
+                      viewBox="0 0 109 109"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M43.5 0C19.5467 0 0 19.5467 0 43.5C0 67.4533 19.5467 87 43.5 87C53.3195 87 62.3668 83.679 69.6621 78.1523L97.7578 106.242C98.3107 106.818 98.9729 107.278 99.7057 107.594C100.438 107.911 101.227 108.079 102.025 108.087C102.824 108.095 103.615 107.944 104.354 107.642C105.094 107.34 105.765 106.894 106.329 106.329C106.894 105.765 107.34 105.094 107.642 104.354C107.944 103.615 108.095 102.824 108.087 102.025C108.079 101.227 107.911 100.438 107.594 99.7057C107.278 98.9729 106.818 98.3107 106.242 97.7578L78.1523 69.6621C83.679 62.3668 87 53.3195 87 43.5C87 19.5467 67.4533 0 43.5 0ZM43.5 12C60.9681 12 75 26.032 75 43.5C75 51.8871 71.7422 59.4618 66.4453 65.0918C65.9297 65.4651 65.4768 65.918 65.1035 66.4336C59.4723 71.7372 51.8931 75 43.5 75C26.0319 75 12 60.968 12 43.5C12 26.032 26.0319 12 43.5 12Z"
+                        fill="black"
+                      />
+                      <circle cx="43.5" cy="43.5" r="31.5" fill="#C7C7C9" />
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Discover</h3>
+                    <p class="process-step_text">
+                      Understand your brand, audience, goals, and Shopify
+                      requirements to establish a strong foundation.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 02 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="96"
+                      height="92"
+                      viewBox="0 0 96 92"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_2)">
+                        <path
+                          d="M72 48C72 34.8 61.2 24 48 24C34.8 24 24 34.8 24 48C24 58.4 30.8 67.2 40 70.8V84C40 86.4 41.6 88 44 88H52C54.4 88 56 86.4 56 84V70.8C65.2 67.2 72 58.4 72 48Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M84 44H96V52H84V44ZM0 44H12V52H0V44ZM44 0H52V12H44V0Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M70.49 76.28L76.15 70.62L84.64 79.11L78.98 84.77L70.49 76.28Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M11.37 16.89L17.03 11.23L25.52 19.72L19.86 25.38L11.37 16.89Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M70.63 19.85L79.11 11.36L84.77 17.02L76.29 25.51L70.63 19.85Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M11.23 78.97L19.72 70.49L25.38 76.15L16.89 84.63L11.23 78.97Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M52 92H44C39.6 92 36 88.4 36 84V73.2C26.4 68.8 20 58.8 20 48C20 32.4 32.4 20 48 20C63.6 20 76 32.4 76 48C76 58.8 69.6 68.8 60 73.2V84C60 88.4 56.4 92 52 92ZM48 28C36.8 28 28 36.8 28 48C28 56.4 33.2 64 41.2 66.8L44 67.6V84H52V67.6L54.8 66.8C62.8 64 68 56.4 68 48C68 36.8 59.2 28 48 28ZM0 44H12V52H0V44Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_2">
+                          <rect width="96" height="92" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Plan</h3>
+                    <p class="process-step_text">
+                      Define the structure, user journey, features, and project
+                      direction before design begins.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 03 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="416"
+                      height="416"
+                      viewBox="0 0 416 416"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_11)">
+                        <path
+                          d="M105.5 353L52.5 363.5L63 310.5C82.18 318.57 97.43 333.82 105.5 353Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M137.5 185.5L45 93L93 45.5L124 77L100.5 100.5L123.5 123.5L147 100L185 138L137.5 185.5Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M324.5 139L131 332.5C120.43 312.19 103.81 295.57 83.5 285L277 91.5L324.5 139Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M347 116.5L299.5 69L310 58.5C317.25 51.25 325.18 47.5 333.5 47.5C341.82 47.5 350.25 51.25 357.5 58.5C371.93 72.94 371.93 91.57 357.5 106L347 116.5Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M370 322L322 370L230.5 278.5L278.5 230.5L316.5 268.5L292.5 292.5L315.5 315.5L339.5 291.5L370 322Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M301 208L380 129C405.75 103.25 405.75 61.75 380 36C367.12 23.13 350.31 16.5 333.5 16.5C316.69 16.5 299.87 23.13 287 36L208 115L93 0L82 11.5L11.5 82L0 93L115 208L35 288L34 293L16.5 381L11.5 404.5L35 399.5L123 382L128 381L208 301L322.5 415.5L333.5 404L404 333.5L415.5 322.5L301 208ZM310 58.5C317.25 51.25 325.18 47.5 333.5 47.5C341.82 47.5 350.25 51.25 357.5 58.5C371.93 72.94 371.93 91.57 357.5 106L347 116.5L299.5 69L310 58.5ZM45 93L93 45.5L124 77L100.5 100.5L123.5 123.5L147 100L185 138L137.5 185.5L45 93ZM52.5 363.5L63 310.5C82.18 318.57 97.43 333.82 105.5 353L52.5 363.5ZM131 332.5C120.43 312.19 103.81 295.57 83.5 285L277 91.5L324.5 139L131 332.5ZM322 370L230.5 278.5L278.5 230.5L316.5 268.5L292.5 292.5L315.5 315.5L339.5 291.5L370 322L322 370Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_11">
+                          <rect width="415.5" height="415.5" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Design</h3>
+                    <p class="process-step_text">
+                      Create intuitive UI/UX with thoughtful layouts,
+                      typography, and conversion-focused experiences.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 04 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="400"
+                      height="400"
+                      viewBox="0 0 400 400"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_24)">
+                        <path
+                          d="M40 40V280H360V40H40ZM180 205L155 230L80 155L155 80L180 105L130 155L180 205ZM245 230L220 205L270 155L220 105L245 80L320 155L245 230Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M360 0H40C17.89 0 0 17.89 0 40V280C0 302.11 17.89 320 40 320H160V340H80L20 400H380L320 340H240V320H360C382.11 320 400 302.11 400 280V40C400 17.89 382.11 0 360 0ZM360 280H40V40H360V280Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M320 155L245 230L220 205L270 155L220 105L245 80L320 155Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M130 155L180 205L155 230L80 155L155 80L180 105L130 155Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_24">
+                          <rect width="400" height="400" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Develop</h3>
+                    <p class="process-step_text">
+                      Turn designs into responsive Shopify storefronts with
+                      clean, flexible, custom development.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 05 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="97"
+                      height="80"
+                      viewBox="0 0 97 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_49)">
+                        <path
+                          d="M80.03 80V68H64.03C59.39 67.29 55.41 64.09 53.46 60H80.03V48L96.03 64L80.03 80Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M68.02 44H66.02C60.5 44 56.02 48.48 56.02 54C56.02 59.52 60.5 64 66.02 64"
+                          stroke="black"
+                          stroke-width="8"
+                          stroke-miterlimit="16"
+                        />
+                        <path
+                          d="M44.0199 54C44.0199 41.87 53.8899 32 66.0199 32C71.9799 32 78.2199 34.45 81.9199 38.58L90.9999 47.66C91.5999 45.87 91.9999 43.99 91.9999 42C91.9999 32.06 83.9399 24 73.9999 24C73.1999 24 72.4399 24.14 71.6799 24.24C69.8699 12.78 59.9799 4 47.9999 4C39.0999 4 31.3399 8.86 27.1999 16.06C26.7999 16.04 26.3999 16 25.9999 16C13.5799 16 3.56994 26.28 4.00994 38.8C4.44994 51.32 14.5899 60 26.5199 60H44.9499C44.3799 58.06 44.0199 56.06 44.0199 54Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M44.2 56H26C16.08 56 8 47.92 8 38C8 28.08 16.08 20 26 20L29.44 20.19L30.67 18.06C34.24 11.86 40.88 8 48 8C57.89 8 66.18 15.09 67.73 24.86L68.33 28.7L72.72 28.13C73.14 28.07 73.56 28 74 28C81.72 28 88 34.28 88 42C88 42.83 87.9 43.63 87.76 44.42L94.15 50.81C95.33 48.11 96 45.13 96 42C96 30.14 86.57 20.45 74.82 20.02C71.36 8.22 60.6 0 48 0C38.84 0 30.24 4.55 25.03 12.02C11.14 12.53 0 23.99 0 38C0 52.01 11.66 64 26 64H46.56C45.23 61.47 44.46 58.79 44.2 56Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_49">
+                          <rect width="96.03" height="80" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Integrate</h3>
+                    <p class="process-step_text">
+                      Connect essential apps, tools, and third-party services
+                      for a seamless ecommerce experience.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 06 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="80"
+                      height="72"
+                      viewBox="0 0 80 72"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_55)">
+                        <path
+                          d="M39.97 71.9401C57.6265 71.9401 71.94 57.555 71.94 39.8101C71.94 22.0651 57.6265 7.68005 39.97 7.68005C22.3135 7.68005 8 22.0651 8 39.8101C8 57.555 22.3135 71.9401 39.97 71.9401Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M40 0C17.94 0 0 17.94 0 40C0 51.03 4.49 61.03 11.73 68.27L17.39 62.61C11.59 56.82 8.01 48.82 8.01 39.99C8.01 22.35 22.37 7.99 40.01 7.99C57.65 7.99 72.01 22.35 72.01 39.99C72.01 48.81 68.42 56.82 62.63 62.61L68.29 68.27C75.53 61.03 80.02 51.02 80.02 40C80 17.94 62.06 0 40 0ZM53.17 21.17L32 40L40 48L58.83 26.83L53.17 21.17Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_55">
+                          <rect width="80" height="71.93" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Optimize</h3>
+                    <p class="process-step_text">
+                      Test and refine performance, responsiveness, usability,
+                      and key conversion details.
+                    </p>
+                  </div>
+                </li>
+
+                <!-- STEP 07 -->
+                <li class="process-step" data-process-step>
+                  <span
+                    class="process-step_icon"
+                    data-process-icon
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="246"
+                      height="425"
+                      viewBox="0 0 246 425"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_30_59)">
+                        <path
+                          d="M45.73 256C50.42 277.25 53.92 292.12 56.23 301.5L37.73 314L32.73 289C30.23 276.44 35.23 263.31 45.73 256Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M150.73 71C136.79 55.12 129.29 49.31 122.73 43.5C116.29 49.19 108.73 55.12 94.73 71C75.73 92.56 58.73 120.44 58.73 136C58.73 156.81 66.29 200.69 74.23 237.5C80.73 267.75 85.11 284.62 87.23 293H158.23C160.36 284.56 164.67 267.44 171.23 237C179.17 200 186.73 156.25 186.73 136C186.73 121.19 169.86 92.75 150.73 71ZM122.73 192.5C104.86 192.5 90.23 178.37 90.23 160.5C90.23 142.63 104.86 128 122.73 128C140.6 128 155.23 142.62 155.23 160.5C155.23 178.38 140.61 192.5 122.73 192.5Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M212.73 289L207.73 314L189.23 301.5C191.48 292.12 194.54 277.12 199.23 256H199.73C210.23 263.31 215.23 276.44 212.73 289Z"
+                          fill="#C7C7C8"
+                        />
+                        <path
+                          d="M170.73 341C170.73 389.5 132.23 418 132.23 418L122.73 425L112.73 417.5C112.73 417.5 74.73 389.25 74.73 341H106.73C106.73 360.31 115.23 373.31 122.73 382C130.23 373.44 138.73 360.62 138.73 341H170.73Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M217.73 230L206.73 222.5C213.23 190.81 218.73 158.44 218.73 136C218.73 103.19 195.67 73.81 174.73 50C153.79 26.19 132.73 8.5 132.73 8.5L122.73 0L112.23 8.5C112.23 8.5 91.67 25.81 70.73 49.5C49.79 73.19 26.73 102.94 26.73 136C26.73 158.69 32.29 190.94 38.73 222.5L27.73 230C6.78997 244.5 -3.77003 270 1.22997 295L11.23 344L15.73 367.5L35.73 354.5L79.73 325H165.73L209.73 354.5L229.73 367.5L234.23 344L244.23 295C249.23 270 238.67 244.5 217.73 230ZM37.73 314L32.73 289C30.23 276.44 35.23 263.31 45.73 256C50.42 277.25 53.92 292.12 56.23 301.5L37.73 314ZM171.23 237C164.67 267.44 160.36 284.56 158.23 293H87.23C85.11 284.62 80.73 267.75 74.23 237.5C66.29 200.69 58.73 156.81 58.73 136C58.73 120.44 75.73 92.56 94.73 71C108.73 55.12 116.29 49.19 122.73 43.5C129.29 49.31 136.79 55.12 150.73 71C169.86 92.75 186.73 121.19 186.73 136C186.73 156.25 179.17 200 171.23 237ZM212.73 289L207.73 314L189.23 301.5C191.48 292.12 194.54 277.12 199.23 256H199.73C210.23 263.31 215.23 276.44 212.73 289Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M155.23 160.5C155.23 178.37 140.61 192.5 122.73 192.5C104.85 192.5 90.23 178.37 90.23 160.5C90.23 142.63 104.86 128 122.73 128C140.6 128 155.23 142.62 155.23 160.5Z"
+                          fill="black"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_30_59">
+                          <rect width="245.45" height="425" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <div class="process-step_card">
+                    <h3 class="process-step_title">Launch</h3>
+                    <p class="process-step_text">
+                      Complete final checks, launch your store, and provide
+                      support for ongoing improvements.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="expertise-section" id="services">
+        <div class="container">
+          <div
+            class="expertise-section_header"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <span class="expertise-section_badge" data-animate="fade-up">
+              Expertise
+            </span>
+            <h2 class="expertise-section_heading" data-animate="fade-up">
+              Shopify experiences, designed and built with purpose
+            </h2>
+            <p class="expertise-section_description" data-animate="fade-up">
+              From custom storefronts to thoughtful UX and clean development, I
+              combine design and technology to create Shopify experiences that
+              feel distinctive, perform smoothly, and help brands turn more
+              visitors into customers.
+            </p>
+          </div>
+          <div
+            class="expertise-section_grid"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  width="440"
+                  height="420"
+                  viewBox="0 0 440 420"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M40 0C23.46 0 10 13.46 10 30V69.1211C9.62553 70.9461 0 117.993 0 145C0 158.786 2.6606 171.985 9.96094 182.52C9.97425 182.539 9.98665 182.559 10 182.578V390C10 406.57 23.43 420 40 420H400C416.57 420 430 406.57 430 390V182.578C430.013 182.559 430.026 182.539 430.039 182.52C437.339 171.985 440 158.786 440 145C440 117.993 430.374 70.9461 430 69.1211V30C430 13.46 416.54 0 400 0H40ZM50 30C55.52 30 60 34.48 60 40C60 45.52 55.52 50 50 50C44.48 50 40 45.52 40 40C40 34.48 44.48 30 50 30ZM80 30C85.52 30 90 34.48 90 40C90 45.52 85.52 50 80 50C74.48 50 70 45.52 70 40C70 34.48 74.48 30 80 30ZM110 30C115.52 30 120 34.48 120 40C120 45.52 115.52 50 110 50C104.48 50 100 45.52 100 40C100 34.48 104.48 30 110 30ZM28.7305 80H70V168.867C63.6151 175.631 54.9663 180 45 180C35.2779 180 30.3934 176.867 26.4062 171.113C22.4191 165.36 20 156.063 20 145C20 125.274 27.0197 89.1144 28.7305 80ZM90 80H140V168.867C133.615 175.631 124.966 180 115 180C105.049 180 96.3903 175.663 90 168.926V80ZM160 80H210V168.867C203.615 175.631 194.966 180 185 180C175.049 180 166.39 175.663 160 168.926V80ZM230 80H280V168.867C273.624 175.624 264.964 180 255 180C245.049 180 236.39 175.663 230 168.926V80ZM300 80H350V168.926C343.619 175.659 334.95 180 325 180C315.049 180 306.382 175.659 300 168.926V80ZM370 80H411.27C412.98 89.1144 420 125.274 420 145C420 156.063 417.581 165.36 413.594 171.113C409.607 176.867 404.722 180 395 180C385.049 180 376.382 175.659 370 168.926V80ZM70 240H160V400H70V240ZM210 240H370V360H210V240Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Custom Shopify</h3>
+                <p class="expertise-card_text">
+                  Build tailored storefronts designed around your brand,
+                  products, and customers.
+                </p>
+              </div>
+            </article>
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#111111"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z"
+                  />
+                  <path d="m14 7 3 3" />
+                  <path d="M5 6v4" />
+                  <path d="M19 14v4" />
+                  <path d="M10 2v2" />
+                  <path d="M7 8H3" />
+                  <path d="M21 16h-4" />
+                  <path d="M11 3H9" />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">UI/UX Design</h3>
+                <p class="expertise-card_text">
+                  Create clear, intuitive experiences that make your store
+                  easier to explore and use.
+                </p>
+              </div>
+            </article>
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  width="330"
+                  height="248"
+                  viewBox="0 0 330 248"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M261.6 188.353C258.4 188.353 255.2 187.153 252.8 184.353C248.4 179.553 248.4 171.953 253.6 167.553L300.4 123.953L253.6 80.3528C248.8 75.9528 248.4 68.3528 252.8 63.5528C257.2 58.7528 264.8 58.3528 269.6 62.7528L326 115.153C328.4 117.553 330 120.753 330 123.953C330 127.153 328.8 130.353 326 132.753L270 185.153C267.6 187.153 264.8 188.353 261.6 188.353ZM68.8 188.353C66 188.353 62.8 187.153 60.8 185.153L4 132.753C1.6 130.353 0 127.153 0 123.953C0 120.753 1.2 117.553 4 115.153L60.4 62.7528C65.2 58.3528 72.8 58.3528 77.2 63.5528C81.6 68.3528 81.6 75.9528 76.4 80.3528L30 123.953L76.8 167.553C81.6 171.953 82 179.553 77.6 184.353C75.2 186.753 72 188.353 68.8 188.353ZM137.2 247.953C136.4 247.953 135.2 247.953 134.4 247.553C128 245.953 124 239.553 125.6 233.153L181.6 9.15281C183.2 2.75281 189.6 -1.24719 196 0.352809C202.4 1.95281 206.4 8.35282 204.8 14.7528L148.8 238.753C147.6 244.353 142.4 247.953 137.2 247.953Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Theme Development</h3>
+                <p class="expertise-card_text">
+                  Develop flexible Shopify themes with clean code, custom
+                  sections, and features.
+                </p>
+              </div>
+            </article>
+            <article
+              class="expertise-card expertise-card--dark expertise-card--wide"
+              data-animate="fade-up"
+              data-animate-delay="80"
+            >
+              <span class="expertise-card_icon">
+                <svg
+                  width="480"
+                  height="382"
+                  viewBox="0 0 480 382"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M240 0C107.266 0 0 107.266 0 240C0 292.422 17.1875 342.5 45.625 381.875L78.125 358.125C58.2031 330.547 44.9219 296.25 41.25 260H60V220H40.625C44.5313 179.531 60.8594 142.656 85 113.125L98.125 126.25L126.25 98.125L113.125 85C142.734 60.9375 179.531 45.1563 220 41.25V60H260V41.25C300.469 45.1563 337.266 60.9375 366.875 85L353.75 98.125L381.875 126.25L395 113.125C419.141 142.656 435.469 179.531 439.375 220H420V260H438.75C435.078 296.25 421.797 330.547 401.875 358.125L434.375 381.875C462.812 342.5 480 292.422 480 240C480 107.266 372.734 0 240 0ZM353.75 126.25L244.375 200.625C242.891 200.469 241.484 200 240 200C217.891 200 200 217.891 200 240C200 262.109 217.891 280 240 280C262.109 280 280 262.109 280 240C280 238.516 279.531 237.109 279.375 235.625L353.75 126.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Performance</h3>
+                <p class="expertise-card_text">
+                  Improve speed, responsiveness, and storefront performance
+                  across every device.
+                </p>
+              </div>
+            </article>
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  width="109"
+                  height="109"
+                  viewBox="0 0 109 109"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.43015 0.000549543C3.2377 0.0191786 2.1014 0.510352 1.27083 1.36619C0.440267 2.22202 -0.0166425 3.37253 0.000463577 4.565V103.565C0.000582903 104.758 0.474728 105.903 1.31862 106.747C2.1625 107.591 3.30703 108.065 4.50046 108.065H103.5C104.097 108.073 104.689 107.963 105.242 107.741C105.796 107.519 106.299 107.188 106.724 106.77C107.148 106.351 107.486 105.852 107.716 105.302C107.946 104.752 108.065 104.161 108.065 103.565C108.065 102.969 107.946 102.378 107.716 101.828C107.486 101.278 107.148 100.779 106.724 100.36C106.299 99.9416 105.796 99.6115 105.242 99.3891C104.689 99.1667 104.097 99.0566 103.5 99.065H9.00046V4.565C9.0091 3.96271 8.89675 3.3648 8.67005 2.80673C8.44336 2.24866 8.10694 1.74177 7.68073 1.31611C7.25453 0.890452 6.74721 0.554683 6.18885 0.328705C5.63048 0.102726 5.03244 -0.00886311 4.43015 0.000549543ZM103.729 9.01227C102.923 8.9779 102.122 9.16101 101.411 9.54243C100.699 9.92385 100.104 10.4895 99.686 11.1802L80.6606 41.6197L71.0981 28.8638C70.6552 28.2737 70.074 27.8015 69.4057 27.4889C68.7374 27.1762 68.0025 27.0327 67.2656 27.0709C66.5288 27.1091 65.8127 27.3279 65.1803 27.708C64.5479 28.0881 64.0186 28.6178 63.6391 29.2505L49.0844 53.5084L39.5981 40.8638C39.1621 40.2837 38.5923 39.8177 37.9373 39.5054C37.2823 39.1931 36.5615 39.0438 35.8363 39.0703C35.1111 39.0968 34.4031 39.2982 33.7726 39.6574C33.1421 40.0167 32.6078 40.523 32.2153 41.1334L18.7153 62.1334C18.3775 62.6303 18.1426 63.1898 18.0244 63.779C17.9063 64.3681 17.9074 64.975 18.0275 65.5637C18.1477 66.1524 18.3845 66.7112 18.7241 67.2069C19.0637 67.7026 19.499 68.1254 20.0046 68.4501C20.5101 68.7749 21.0756 68.9952 21.6676 69.0979C22.2597 69.2006 22.8663 69.1837 23.4517 69.0483C24.0371 68.9128 24.5895 68.6615 25.0762 68.3091C25.5629 67.9568 25.9741 67.5105 26.2856 66.9966L36.2876 51.44L45.9028 64.2662C46.3457 64.8563 46.9269 65.3285 47.5952 65.6411C48.2635 65.9538 48.9984 66.0973 49.7353 66.0591C50.4721 66.0209 51.1883 65.8021 51.8207 65.422C52.4531 65.0419 52.9823 64.5122 53.3618 63.8795L67.9165 39.6216L77.4028 52.2662C77.8416 52.8499 78.4159 53.3181 79.0761 53.6303C79.7363 53.9425 80.4625 54.0894 81.1921 54.0583C81.9217 54.0271 82.6328 53.8189 83.264 53.4516C83.8951 53.0842 84.4274 52.5688 84.8149 51.9498L107.315 15.9498C107.745 15.284 107.991 14.5166 108.029 13.7251C108.068 12.9335 107.896 12.146 107.532 11.442C107.168 10.738 106.625 10.1426 105.957 9.71597C105.289 9.28932 104.521 9.04658 103.729 9.01227Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Conversion Focus</h3>
+                <p class="expertise-card_text">
+                  Design smoother product journeys that reduce friction and
+                  encourage more purchases.
+                </p>
+              </div>
+            </article>
+            <article
+              class="expertise-card expertise-card--wide"
+              data-animate="fade-up"
+            >
+              <span class="expertise-card_icon">
+                <svg
+                  width="416"
+                  height="416"
+                  viewBox="0 0 416 416"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M80 0.00626792C36 0.00626792 0 36.0063 0 80.0063C0 118.506 27.625 150.881 64 158.381V256.006H16C7.12499 256.006 0 263.131 0 272.006V400.006C0 408.881 7.12499 416.006 16 416.006H144C152.875 416.006 160 408.881 160 400.006V272.006C160 263.131 152.875 256.006 144 256.006H96V158.381C127.25 152.006 152 127.256 158.375 96.0063H265.375L320 150.631V257.631C283.625 265.131 256 297.506 256 336.006C256 380.006 292 416.006 336 416.006C380 416.006 416 380.006 416 336.006C416 297.506 388.375 265.131 352 257.631V150.631L411.375 91.2563C417.5 85.1313 417.5 74.8813 411.375 68.7563L347.375 4.75628C344.25 1.63126 340.125 -0.118724 335.75 0.00626792C331.625 0.13126 327.625 1.75628 324.625 4.75628L265.375 64.0063H158.375C150.875 27.6313 118.5 0.00626792 80 0.00626792ZM80 32.0063C106.75 32.0063 128 53.2563 128 80.0063C128 106.756 106.75 128.006 80 128.006C53.25 128.006 32 106.756 32 80.0063C32 53.2563 53.25 32.0063 80 32.0063ZM336 38.6313L377.375 80.0063L336 121.381L294.625 80.0063L336 38.6313ZM32 288.006H128V384.006H32V288.006ZM336 288.006C362.75 288.006 384 309.256 384 336.006C384 362.756 362.75 384.006 336 384.006C309.25 384.006 288 362.756 288 336.006C288 309.256 309.25 288.006 336 288.006Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Integrations</h3>
+                <p class="expertise-card_text">
+                  Connect your store with the tools, apps, and services your
+                  business relies on.
+                </p>
+              </div>
+            </article>
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  width="480"
+                  height="336"
+                  viewBox="0 0 480 336"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M80 0C53.6805 0 32 21.6805 32 48V256C32 268.297 36.866 279.466 44.5938 288H0C0 314.512 21.488 336 48 336H432C458.512 336 480 314.512 480 288H435.406C443.134 279.466 448 268.297 448 256V48C448 21.6805 426.32 0 400 0H80ZM80 32H400C409.04 32 416 38.9595 416 48V256C416 265.04 409.04 272 400 272H80C70.9595 272 64 265.04 64 256V48C64 38.9595 70.9595 32 80 32Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Responsive Design</h3>
+                <p class="expertise-card_text">
+                  Deliver polished experiences that look and work beautifully
+                  across all screen sizes.
+                </p>
+              </div>
+            </article>
+            <article class="expertise-card" data-animate="fade-up">
+              <span class="expertise-card_icon">
+                <svg
+                  width="114"
+                  height="114"
+                  viewBox="0 0 114 114"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M76.4741 0C55.817 0 38.9741 16.8429 38.9741 37.5C38.9741 41.7204 39.8615 45.7023 41.1538 49.4883L4.80805 85.834H4.80219C-1.60381 92.24 -1.5996 102.762 4.80805 109.166C8.01113 112.365 12.2566 114 16.4741 114C20.6916 114 24.937 112.365 28.1401 109.166H28.1459L64.4858 72.8203C68.2717 74.113 72.2566 75 76.4799 75C97.137 75 113.98 58.1571 113.98 37.5C113.98 31.4973 112.524 25.828 110.031 20.8184C109.713 20.18 109.247 19.6265 108.673 19.2033C108.099 18.7802 107.433 18.4995 106.729 18.3845C106.025 18.2695 105.304 18.3234 104.625 18.5418C103.946 18.7602 103.328 19.1368 102.824 19.6406L82.2163 40.2422C81.0276 41.4309 79.517 42 77.9741 42C76.4312 42 74.9205 41.4309 73.7319 40.2422C71.3529 37.865 71.3529 34.1409 73.7319 31.7637V31.7578L94.3334 11.1562C94.8373 10.6514 95.2139 10.0341 95.4323 9.35518C95.6507 8.67624 95.7046 7.9551 95.5896 7.25123C95.4746 6.54736 95.1939 5.8809 94.7707 5.3068C94.3476 4.73269 93.794 4.26738 93.1557 3.94922C88.1449 1.45232 82.4768 0 76.4741 0ZM76.4741 9C78.7223 9 80.8979 9.27454 82.9897 9.77344L67.3686 25.3945C61.5455 31.2133 61.5455 40.7867 67.3686 46.6055C70.2779 49.5148 74.141 51 77.9741 51C81.8072 51 85.6702 49.5148 88.5795 46.6055L104.206 30.9844C104.705 33.0766 104.98 35.2517 104.98 37.5C104.98 53.2929 92.2728 66 76.4799 66C72.4032 66 68.5534 65.1343 65.0424 63.5918C64.2127 63.2272 63.2922 63.1217 62.4014 63.2889C61.5107 63.4562 60.6912 63.8885 60.0502 64.5293L21.7768 102.803C20.2885 104.287 18.3987 105 16.4741 105C14.5476 105 12.6544 104.29 11.1655 102.803C8.20113 99.8403 8.20534 95.1633 11.1713 92.1973L49.4448 53.9297C50.0855 53.2887 50.5179 52.4692 50.6851 51.5785C50.8524 50.6878 50.7468 49.7673 50.3823 48.9375C48.8401 45.4273 47.9741 41.5733 47.9741 37.5C47.9741 21.7071 60.6812 9 76.4741 9Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </span>
+              <div class="expertise-card_content">
+                <h3 class="expertise-card_title">Ongoing Support</h3>
+                <p class="expertise-card_text">
+                  Refine, improve, and maintain your storefront as your business
+                  continues to grow.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials-section" id="testimonials">
+        <div class="container">
+          <div
+            class="testimonials-section__header"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <div class="testimonials-section__header-left">
+              <span class="testimonials-section__badge" data-animate="fade-up">
+                Testimonials
+              </span>
+              <h2 class="testimonials-section__heading" data-animate="fade-up">
+                What clients say
+              </h2>
+            </div>
+
+            <p class="testimonials-section__description" data-animate="fade-up">
+              Thoughtful feedback from founders and teams who trusted the
+              process, direction, and final result.
+            </p>
+          </div>
+          <div
+            class="testimonials-section__grid"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <article
+              class="testimonial-card testimonial-card--featured"
+              data-animate="fade-up"
+            >
+              <div class="testimonial-card__content">
+                <div
+                  class="testimonial-card__rating"
+                  aria-label="5 out of 5 stars"
+                >
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <p class="testimonial-card__quote">
+                  Mehul understood what we wanted from the start. The Shopify
+                  store feels much cleaner, easier to navigate, and much more
+                  aligned with our brand. The whole process was smooth and
+                  professional.
+                </p>
+              </div>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">
+                  <img
+                    src="./assets/img/Person-2.webp"
+                    alt="Person 1"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="testimonial-card__author-info">
+                  <strong>Daniel Morgan</strong>
+                  <span>Founder</span>
+                </div>
+              </div>
+            </article>
+            <!-- Middle column -->
+            <div class="testimonials-section__column">
+              <!-- Standard testimonial -->
+              <article
+                class="testimonial-card testimonial-card--standard"
+                data-animate="fade-up"
+              >
+                <p class="testimonial-card__quote">
+                  The attention to detail was impressive. Mehul turned our ideas
+                  into a polished Shopify experience that feels simple, modern,
+                  and easy to use. Communication was clear throughout the
+                  project.
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <img
+                      src="./assets/img/Person-1.webp"
+                      alt="Person 2"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="testimonial-card__author-info">
+                    <strong>Olivia Bennett</strong>
+                    <span>Brand Owner</span>
+                  </div>
+                </div>
+              </article>
+              <!-- Trust card -->
+              <div class="testimonial-trust-card" data-animate="fade-up">
+                <div class="testimonial-trust-card__icon" aria-hidden="true">
+                  <svg
+                    width="480"
+                    height="320"
+                    viewBox="0 0 480 320"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M240 0C221.435 0 203.63 7.37498 190.503 20.5025C177.375 33.6301 170 51.4348 170 70C170 88.5652 177.375 106.37 190.503 119.497C203.63 132.625 221.435 140 240 140C258.565 140 276.37 132.625 289.497 119.497C302.625 106.37 310 88.5652 310 70C310 51.4348 302.625 33.6301 289.497 20.5025C276.37 7.37498 258.565 0 240 0ZM90 60C76.7392 60 64.0215 65.2678 54.6447 74.6447C45.2678 84.0215 40 96.7392 40 110C40 123.261 45.2678 135.979 54.6447 145.355C64.0215 154.732 76.7392 160 90 160C103.261 160 115.979 154.732 125.355 145.355C134.732 135.979 140 123.261 140 110C140 96.7392 134.732 84.0215 125.355 74.6447C115.979 65.2678 103.261 60 90 60ZM390 60C376.739 60 364.021 65.2678 354.645 74.6447C345.268 84.0215 340 96.7392 340 110C340 123.261 345.268 135.979 354.645 145.355C364.021 154.732 376.739 160 390 160C403.261 160 415.979 154.732 425.355 145.355C434.732 135.979 440 123.261 440 110C440 96.7392 434.732 84.0215 425.355 74.6447C415.979 65.2678 403.261 60 390 60ZM240 180C193.28 180 100 203.46 100 250V320H380V250C380 203.46 286.72 180 240 180ZM77.9688 201.055C46.3488 205.935 0 227.782 0 254.102V320H60V250C60 230.78 66.9088 214.655 77.9688 201.055ZM402.031 201.055C413.091 214.655 420 230.78 420 250V320H480V254.102C480 227.782 433.651 205.935 402.031 201.055Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <span>Trusted by 20+ clients</span>
+              </div>
+            </div>
+            <!-- Right column -->
+            <div class="testimonials-section__column">
+              <!-- CTA -->
+              <a href="#contact" class="testimonial-cta" data-animate="fade-up">
+                <span>Let’s work together</span>
+                <span class="btn__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                  </svg>
+                </span>
+              </a>
+              <!-- Right testimonial -->
+              <article
+                class="testimonial-card testimonial-card--standard testimonial-card--right"
+                data-animate="fade-up"
+              >
+                <p class="testimonial-card__quote">
+                  Mehul helped us turn a basic Shopify setup into something that
+                  feels much more professional. The design is clean, responsive,
+                  and focused on making the shopping experience easier for our
+                  customers.
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <img
+                      src="./assets/img/Person-3.webp"
+                      alt="Person 3"
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="testimonial-card__author-info">
+                    <strong>James Carter</strong>
+                    <span>E-commerce Founder</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div
+            class="faq-section__header"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <h2 class="faq-section__heading" data-animate="fade-up">
+              Explore our FAQs
+            </h2>
+            <p class="faq-section__description" data-animate="fade-up">
+              Answers to questions about process, pricing, timelines, and
+              project details
+            </p>
+          </div>
+          <div
+            class="faq-section__list"
+            data-animate-group
+            data-animate-threshold="0.1"
+          >
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  What Shopify services do you offer?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+
+              <div class="faq-item__answer">
+                <p>
+                  I specialize in custom Shopify storefronts, UI/UX design,
+                  Shopify theme development, performance optimization,
+                  conversion-focused improvements, third-party integrations,
+                  responsive design, and ongoing store support.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Can you build a completely custom Shopify store?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Yes. I can design and develop a Shopify storefront around your
+                  brand, products, customers, and business goals. The result is
+                  a tailored experience rather than a generic, one-size-fits-all
+                  theme.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Can you customize or improve my existing Shopify store?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Absolutely. I can improve an existing Shopify store through
+                  design refinements, custom sections, UX improvements,
+                  responsive fixes, performance optimization, and new
+                  functionality without necessarily rebuilding the entire store.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Do you design Shopify stores from scratch?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Yes. I can handle both the design and development process,
+                  from structuring the user experience and creating the visual
+                  direction to developing the final Shopify storefront.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Can you improve my Shopify store's conversion rate?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  I focus on creating smoother product journeys, clearer
+                  navigation, stronger calls to action, and frictionless
+                  shopping experiences. While no conversion result can be
+                  guaranteed, the store is designed with conversion best
+                  practices and your business goals in mind.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  What do you need to get started?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Usually, I’ll need information about your brand, goals,
+                  Shopify store, products, required functionality, design
+                  references, and any existing assets or designs. From there, we
+                  can define the scope and next steps.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Can you work on a specific Shopify task instead of a full
+                  store?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Yes. You can hire me for focused Shopify work such as a custom
+                  section, responsive fixes, UX improvements, performance
+                  optimization, integrations, or other specific development
+                  requirements.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" data-animate="fade-up">
+              <summary class="faq-item__summary">
+                <span class="faq-item__question">
+                  Do you provide ongoing Shopify support?
+                </span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__answer">
+                <p>
+                  Yes. I can continue working with you after launch to refine
+                  the storefront, fix issues, add functionality, improve
+                  performance, and support your store as your business grows.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           CONTACT & PROJECT INQUIRY SECTION
+           ════════════════════════════════════════════════ -->
+      <section
+        class="contact-section"
+        id="contact"
+        aria-label="Contact and project inquiry"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="contact-section__header">
+            <span class="pill pill--badge">Contact</span>
+            <h2 class="contact-section__title">
+              Let's talk about your next project
+            </h2>
+            <p class="contact-section__subtitle">
+              Have a brand, website or product idea in mind? Share a few details
+              and I'll get back to you soon.
+            </p>
+          </div>
+
+          <!-- Section Grid -->
+          <div class="contact-grid">
+            <!-- Left Card: Form -->
+            <div class="contact-form-card">
+              <form
+                action="https://formspree.io/f/mbgdweby"
+                method="POST"
+                class="contact-form"
+                id="contact-form"
+                novalidate
+              >
+                <!-- Hidden subject field for Formspree notification -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Project Inquiry from Portfolio - Mehul Munjapara"
+                />
+
+                <!-- Name Field -->
+                <div class="contact-form__group" id="group-name">
+                  <label for="contact-name" class="contact-form__label"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="contact-form__input"
+                    placeholder="Jane Smith"
+                    autocomplete="name"
+                    required
+                  />
+                  <span class="contact-form__error" id="name-error" role="alert"
+                    >Please enter your name.</span
+                  >
+                </div>
+
+                <!-- Email Field -->
+                <div class="contact-form__group" id="group-email">
+                  <label for="contact-email" class="contact-form__label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="contact-form__input"
+                    placeholder="jane@gmail.com"
+                    autocomplete="email"
+                    required
+                  />
+                  <span
+                    class="contact-form__error"
+                    id="email-error"
+                    role="alert"
+                    >Please enter a valid email address.</span
+                  >
+                </div>
+
+                <!-- Project Type Field -->
+                <div class="contact-form__group" id="group-project-type">
+                  <label for="contact-project-type" class="contact-form__label"
+                    >Project type</label
+                  >
+                  <div class="contact-form__select-wrapper">
+                    <select
+                      id="contact-project-type"
+                      name="project_type"
+                      class="contact-form__select"
+                      required
+                    >
+                      <option value="" disabled selected>Select...</option>
+                      <option value="Custom Shopify store">
+                        Custom Shopify store
+                      </option>
+                      <option value="Theme customization">
+                        Theme customization
+                      </option>
+                      <option value="Store redesign / CRO">
+                        Store redesign / CRO
+                      </option>
+                      <option value="Speed & performance">
+                        Speed &amp; performance
+                      </option>
+                      <option value="App / integration">
+                        App / integration
+                      </option>
+                      <option value="Ongoing support">Ongoing support</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <span class="contact-form__select-arrow" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </span>
+                  </div>
+                  <span
+                    class="contact-form__error"
+                    id="project-type-error"
+                    role="alert"
+                    >Please select a project type.</span
+                  >
+                </div>
+
+                <!-- Budget Range Field -->
+                <div class="contact-form__group" id="group-budget">
+                  <label for="contact-budget" class="contact-form__label"
+                    >Budget range</label
+                  >
+                  <div class="contact-form__select-wrapper">
+                    <select
+                      id="contact-budget"
+                      name="budget"
+                      class="contact-form__select"
+                    >
+                      <option value="" disabled selected>Select...</option>
+                      <option value="Under $500">Under $500</option>
+                      <option value="$500 – $1,000">$500 – $1,000</option>
+                      <option value="$1,000 – $3,000">$1,000 – $3,000</option>
+                      <option value="$3,000 – $5,000">$3,000 – $5,000</option>
+                      <option value="$5,000 – $10,000">$5,000 – $10,000</option>
+                      <option value="$10,000+">$10,000+</option>
+                      <option value="Not Sure Yet">Not Sure Yet</option>
+                    </select>
+                    <span class="contact-form__select-arrow" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </span>
+                  </div>
+                  <span
+                    class="contact-form__error"
+                    id="budget-error"
+                    role="alert"
+                    >Please select a budget range.</span
+                  >
+                </div>
+
+                <!-- Message Field -->
+                <div class="contact-form__group" id="group-message">
+                  <label for="contact-message" class="contact-form__label"
+                    >Message</label
+                  >
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    class="contact-form__textarea"
+                    rows="4"
+                    placeholder="Tell me about your project..."
+                    required
+                  ></textarea>
+                  <span
+                    class="contact-form__error"
+                    id="message-error"
+                    role="alert"
+                    >Please enter a message.</span
+                  >
+                </div>
+
+                <!-- Submit Button -->
+                <div class="contact-form__action">
+                  <button
+                    type="submit"
+                    class="contact-form__submit"
+                    id="contact-submit-btn"
+                  >
+                    <span class="contact-form__submit-text">Send message</span>
+                    <span
+                      class="contact-form__submit-loader"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success Card State -->
+              <div
+                class="contact-form__status-card contact-form__status-card--success"
+                id="contact-form-success"
+                hidden
+              >
+                <div class="contact-form__status-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                </div>
+                <h3 class="contact-form__status-title">
+                  Message Sent Successfully!
+                </h3>
+                <p class="contact-form__status-text">
+                  Thank you for reaching out. I've received your project details
+                  and will get back to you within 24 hours.
+                </p>
+                <button
+                  type="button"
+                  class="contact-form__reset-btn"
+                  id="contact-form-reset-btn"
+                >
+                  Send another message
+                </button>
+              </div>
+
+              <!-- General Form Error Notification -->
+              <div
+                class="contact-form__status-card contact-form__status-card--error"
+                id="contact-form-error"
+                hidden
+              >
+                <p class="contact-form__status-error-text">
+                  Oops! Something went wrong while sending your message. Please
+                  try again or email me directly at
+                  <a href="mailto:munjapara525@gmail.com"
+                    >munjapara525@gmail.com</a
+                  >.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Card: Project Availability & Direct Info -->
+            <div class="contact-info-card">
+              <div class="contact-info-card__bg">
+                <img
+                  src="./assets/img/contact-card-bg.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="contact-info-card__content">
+                <!-- Top Action Arrow Button -->
+                <div class="contact-info-card__top">
+                  <a
+                    href="mailto:munjapara525@gmail.com"
+                    class="contact-info-card__arrow-btn"
+                    aria-label="Send direct email"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+                <!-- Header Info -->
+                <div class="contact-info-card__header">
+                  <h3 class="contact-info-card__title">
+                    Available for selected projects
+                  </h3>
+                  <p class="contact-info-card__subtitle">
+                    Currently accepting new projects
+                  </p>
+                </div>
+
+                <div class="contact-info-card__divider"></div>
+
+                <!-- Info Items -->
+                <div class="contact-info-card__list">
+                  <!-- Email Item -->
+                  <div class="contact-info-item">
+                    <div class="contact-info-item__icon-wrap">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        ></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div class="contact-info-item__details">
+                      <span class="contact-info-item__label">EMAIL</span>
+                      <a
+                        href="mailto:munjapara525@gmail.com"
+                        class="contact-info-item__value contact-info-item__value--link"
+                      >
+                        munjapara525@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-card__divider"></div>
+
+                  <!-- Location Item -->
+                  <div class="contact-info-item">
+                    <div class="contact-info-item__icon-wrap">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                        ></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div class="contact-info-item__details">
+                      <span class="contact-info-item__label">LOCATION</span>
+                      <span class="contact-info-item__value"
+                        >India / Remote (Worldwide)</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="contact-info-card__divider"></div>
+
+                  <!-- Response Time Item -->
+                  <div class="contact-info-item">
+                    <div class="contact-info-item__icon-wrap">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div class="contact-info-item__details">
+                      <span class="contact-info-item__label"
+                        >RESPONSE TIME</span
+                      >
+                      <span class="contact-info-item__value"
+                        >Within 24 hours</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Direct Connect Footer in Card -->
+                <div class="contact-info-card__footer">
+                  <a
+                    href="https://wa.me/918460787967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-info-card__chat-btn"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.16 1.6 5.97L0 24l6.23-1.63a11.95 11.95 0 0 0 5.83 1.5h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.42zM12.06 21.84h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.18c0-5.49 4.47-9.96 9.97-9.96 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"
+                      />
+                    </svg>
+                    <span>Instant WhatsApp Chat</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top-wrapper">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img
+                src="./logo/logo-light.png"
+                alt="Mehul Munjapara"
+                width="175"
+                height="38"
+                loading="lazy"
+              />
+            </div>
+            <div class="footer__text">
+              <p>
+                Building clean, modern, and conversion-focused digital
+                experiences that help brands stand out and grow.
+              </p>
+            </div>
+
+            <!-- Direct Contacts: Email, Phone, WhatsApp -->
+            <div class="footer__contacts">
+              <a
+                href="mailto:munjapara525@gmail.com"
+                class="footer__contact-item"
+                aria-label="Email Mehul Munjapara"
+              >
+                <span class="footer__contact-icon footer__contact-icon--mail">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <div class="footer__contact-info">
+                  <span class="footer__contact-label">Email</span>
+                  <span class="footer__contact-value"
+                    >munjapara525@gmail.com</span
+                  >
+                </div>
+              </a>
+
+              <a
+                href="tel:+918460787967"
+                class="footer__contact-item"
+                aria-label="Call Mehul Munjapara"
+              >
+                <span class="footer__contact-icon footer__contact-icon--phone">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </span>
+                <div class="footer__contact-info">
+                  <span class="footer__contact-label">Contact Number</span>
+                  <span class="footer__contact-value">+91 84607 87967</span>
+                </div>
+              </a>
+
+              <a
+                href="https://wa.me/918460787967"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__contact-item"
+                aria-label="WhatsApp Mehul Munjapara"
+              >
+                <span
+                  class="footer__contact-icon footer__contact-icon--whatsapp"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.16 1.6 5.97L0 24l6.23-1.63a11.95 11.95 0 0 0 5.83 1.5h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.42zM12.06 21.84h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.18c0-5.49 4.47-9.96 9.97-9.96 2.66 0 5.16 1.04 7.04 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.49-4.47 9.96-9.97 9.96zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"
+                    />
+                  </svg>
+                </span>
+                <div class="footer__contact-info">
+                  <span class="footer__contact-label">WhatsApp Number</span>
+                  <span class="footer__contact-value">+91 84607 87967</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="footer__right">
+            <nav class="footer__pages-menu" aria-label="Footer">
+              <strong>Quick Links</strong>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#work" class="footer__menu-link">Projects</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#benefits" class="footer__menu-link">Benefits</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#process" class="footer__menu-link">Process</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#services" class="footer__menu-link">Services</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#why" class="footer__menu-link">Why Me</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#testimonials" class="footer__menu-link">Reviews</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#faq" class="footer__menu-link">FAQ</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#contact" class="footer__menu-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom-wrapper">
+          <p class="footer__copyright">
+            © 2026 Mehul Munjapara. All rights reserved.
+          </p>
+          <p class="footer__credit">
+            Designed &amp; built by Mehul Munjapara — Senior Shopify Developer.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- @/footer -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

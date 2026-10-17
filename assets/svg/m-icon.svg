@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="28" fill="#0B1B3B" />
+  <!-- M Monogram -->
+  <g transform="translate(24, 25)">
+    <!-- Left vertical bar -->
+    <path d="M0 12 L0 70 L14 70 L14 26 Z" fill="#FFFFFF"/>
+    <!-- Right vertical bar -->
+    <path d="M58 0 L72 12 L72 70 L58 70 Z" fill="#FFFFFF"/>
+    <!-- Diagonal line / Chevron -->
+    <path d="M14 26 L36 44 L58 26 L72 14 L36 48 Z" fill="#1A6DF0"/>
+    <!-- Lower Chevron -->
+    <path d="M18 48 L36 62 L54 48 L54 58 L36 72 L18 58 Z" fill="#1A6DF0"/>
+  </g>
+</svg>
