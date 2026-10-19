@@ -125,7 +125,7 @@
   });
 
   window.addEventListener('resize', function () {
-    if (window.innerWidth >= 992 && menuOpen) closeMenu();
+    if (window.innerWidth >= 1100 && menuOpen) closeMenu();
   });
 
   // =========================================================
@@ -145,13 +145,24 @@
       children.forEach(function (child) {
         if (child.nodeType === Node.TEXT_NODE) {
           var frag = document.createDocumentFragment();
-          child.textContent.split('').forEach(function (ch) {
-            var span = document.createElement('span');
-            span.className = 'js-anim-char';
-            span.style.setProperty('--i', i);
-            span.textContent = ch === ' ' ? '\u00A0' : ch;
-            frag.appendChild(span);
-            i++;
+          // Keep each word in a no-wrap wrapper so lines only break between words
+          child.textContent.split(/(\s+)/).forEach(function (token) {
+            if (token === '') return;
+            if (/^\s+$/.test(token)) {
+              frag.appendChild(document.createTextNode(' '));
+              return;
+            }
+            var word = document.createElement('span');
+            word.className = 'js-anim-word';
+            token.split('').forEach(function (ch) {
+              var span = document.createElement('span');
+              span.className = 'js-anim-char';
+              span.style.setProperty('--i', i);
+              span.textContent = ch;
+              word.appendChild(span);
+              i++;
+            });
+            frag.appendChild(word);
           });
           node.replaceChild(frag, child);
         } else if (child.nodeType === Node.ELEMENT_NODE) {

@@ -31,18 +31,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/svg+xml" href="./assets/svg/m-icon.svg" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Instrument+Serif:ital@1&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#F7F7F8" />
+    <meta name="theme-color" content="#F4F5F8" />
     <script>
       document.documentElement.classList.add("js");
     </script>
     <!-- @/head -->
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/home-page.css" />
-    <link rel="stylesheet" href="./css/content.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- @header --><!-- ============ 1) PRIMARY HEADER (normal flow) ============ -->
@@ -241,6 +238,10 @@
             data-animate-threshold="0.3"
           >
             <div class="hero-section_content">
+              <span class="hero-section_status" data-animate="fade-up">
+                <span class="hero-section_status-dot" aria-hidden="true"></span>
+                Senior Shopify Developer &amp; UI/UX Designer
+              </span>
               <h1
                 class="hero-section_heading"
                 aria-label="Shopify stores built to stand out"
@@ -1801,6 +1802,7 @@
             data-animate-group
             data-animate-threshold="0.1"
           >
+            <span class="pill pill--badge" data-animate="fade-up">FAQ</span>
             <h2 class="faq-section__heading" data-animate="fade-up">
               Explore our FAQs
             </h2>
@@ -2235,8 +2237,7 @@
                       stroke-linejoin="round"
                       aria-hidden="true"
                     >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7"></polyline>
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
                     </svg>
                   </a>
                 </div>
