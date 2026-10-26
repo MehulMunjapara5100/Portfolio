@@ -27,9 +27,10 @@
   --success: #16a34a;
   --danger: #dc2626;
 
-  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-display: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-display);
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
 
   --radius-xl: 32px;
   --radius-lg: 24px;
@@ -125,8 +126,9 @@ h3 {
   font-family: var(--font-display);
   color: var(--ink);
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  font-feature-settings: "ss01", "cv11";
 }
 
 [hidden] {
@@ -191,9 +193,11 @@ main > section {
   border: 1px solid var(--line-strong);
   background: var(--surface);
   color: var(--ink);
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   line-height: 1.4;
   box-shadow: var(--shadow-sm);
 }
@@ -486,23 +490,25 @@ main > section {
 .header-ghost {
   position: fixed;
   top: 12px;
-  left: 50%;
+  left: 0;
+  right: 0;
   z-index: 90;
   width: min(calc(100% - 24px), calc(var(--container) + 40px));
+  margin-inline: auto;
   padding: 8px 8px 8px 22px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow: 0 1px 0 rgba(10, 15, 28, 0.04), 0 20px 40px -18px rgba(10, 15, 28, 0.25);
   backdrop-filter: saturate(180%) blur(18px);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
-  transform: translate(-50%, -140%);
+  transform: translateY(-140%);
   opacity: 0;
   transition: transform 0.6s var(--ease), opacity 0.4s;
 }
 
 .header-ghost--visible {
-  transform: translate(-50%, 0);
+  transform: none;
   opacity: 1;
 }
 
@@ -694,9 +700,9 @@ body.header_no-scroll .header-ghost {
 }
 
 .hero-section_heading {
-  font-size: clamp(44px, 7.4vw, 96px);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  font-size: clamp(40px, calc(6.4vw - 12px), 80px);
+  line-height: 1;
+  letter-spacing: -0.05em;
   margin-bottom: 28px;
 }
 
@@ -706,10 +712,6 @@ body.header_no-scroll .header-ghost {
 
 .hero-section_heading-stand-out,
 .hero-section_heading-stand-out .js-anim-char {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   color: var(--accent);
 }
 
@@ -1812,8 +1814,11 @@ body.header_no-scroll .header-ghost {
 }
 
 .faq-item__answer {
-  padding: 0 24px 24px;
   color: var(--muted);
+}
+
+.faq-item__answer p {
+  padding: 0 24px 24px;
   max-width: 70ch;
 }
 
@@ -2403,6 +2408,168 @@ html.js .is-visible.why-card:hover {
   transform: translateY(-4px);
 }
 
+/* ---------- 16b) MOTION LAYER (js/animations.js) ---------- */
+
+/* Elements mid-entrance: let Motion own the values, no CSS transitions */
+.m-anim:not(.is-visible) {
+  transition: none !important;
+}
+
+/* Masked word reveal */
+.m-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0.04em 0.08em 0.12em;
+  margin: -0.04em -0.08em -0.12em;
+}
+
+.m-word__inner {
+  display: inline-block;
+  transform-origin: 0 100%;
+  will-change: transform;
+}
+
+/* Scroll progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: 3px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  pointer-events: none;
+}
+
+/* Spring-driven elements: Motion owns `transform`, CSS keeps colour/shadow */
+.m-spring {
+  transition-property: background-color, color, border-color, box-shadow, opacity !important;
+}
+
+html.motion-ready.js body .m-spring.m-spring.m-spring:hover {
+  transform: none;
+}
+
+html.motion-ready .header-ghost,
+html.motion-ready .header_mobile-panel {
+  transition: none;
+}
+
+html.motion-ready .faq-item::details-content {
+  transition: none;
+}
+
+.work-card,
+.hero-section_image-wrapper {
+  perspective: 1000px;
+}
+
+/* Mono labels */
+.hero-section_card-eyebrow,
+.contact-info-item__label,
+.footer__pages-menu strong,
+.process-step_card::before,
+.work-card__year,
+.hero-section_stat-label,
+.why-card_stat-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.work-card__year,
+.hero-section_stat-label,
+.why-card_stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Cursor spotlight */
+.work-card,
+.benefit-card,
+.why-card,
+.expertise-card,
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+span.spotlight {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(30, 111, 240, 0.09), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.why-card--dark span.spotlight,
+.expertise-card--dark span.spotlight,
+.testimonial-card--featured span.spotlight,
+.contact-info-card span.spotlight,
+.why-card--available span.spotlight {
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.12), transparent 65%);
+}
+
+:is(.work-card, .benefit-card, .why-card, .expertise-card, .testimonial-card, .contact-info-card, .process-step_card):hover > span.spotlight {
+  opacity: 1;
+}
+
+/* Tilt targets */
+.work-media,
+.hero-section_image {
+  will-change: transform;
+}
+
+/* Ambient motion */
+.hero-section::before {
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-3%, 2%, 0) scale(1.05); }
+  100% { transform: translate3d(2%, -2%, 0) scale(1); }
+}
+
+.hero-section_image-wrapper::before {
+  animation: glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { opacity: 0.25; transform: scale(0.9); }
+  to { opacity: 0.45; transform: scale(1.15); }
+}
+
+.why-card--dark::before,
+.testimonial-card--featured::before,
+.expertise-card--dark::before {
+  animation: aurora 12s ease-in-out infinite alternate;
+}
+
+@keyframes aurora {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-8%, 6%, 0) scale(1.15); }
+}
+
+.hero-section_heading-stand-out .m-word__inner {
+  background: linear-gradient(100deg, var(--accent) 20%, var(--accent-2) 40%, var(--accent) 60%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s ease-in-out 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  60%, 100% { background-position: -50% 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2453,6 +2620,10 @@ html.js .is-visible.why-card:hover {
 @media (max-width: 991px) {
   .hero-section_panel {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-section_heading {
+    font-size: clamp(40px, 8vw, 64px);
   }
 
   .hero-section_image-wrapper {
@@ -2696,7 +2867,7 @@ html.js .is-visible.why-card:hover {
     padding: 18px;
   }
 
-  .faq-item__answer {
+  .faq-item__answer p {
     padding: 0 18px 20px;
   }
 

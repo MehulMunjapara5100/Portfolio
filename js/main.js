@@ -252,7 +252,9 @@
   }
 
   var groups = document.querySelectorAll('[data-animate-group]');
-  if (!('IntersectionObserver' in window)) {
+  if (window.Motion && !prefersReducedMotion) {
+    // Reveals and counters are driven by js/animations.js
+  } else if (!('IntersectionObserver' in window)) {
     groups.forEach(instantReveal);
   } else {
     groups.forEach(function (group) {
@@ -360,10 +362,29 @@
         var headerOffset = 90;
         var elementPosition = target.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        if (window.Motion && !prefersReducedMotion) {
+          // Eased scroll via Motion; any user scroll input cancels it
+          var startY = window.pageYOffset;
+          var distance = Math.abs(offsetPosition - startY);
+          var scrollAnim = window.Motion.animate(startY, offsetPosition, {
+            duration: Math.min(1.6, 0.6 + distance / 4000),
+            ease: [0.65, 0, 0.35, 1],
+            onUpdate: function (v) { window.scrollTo(0, v); }
+          });
+          var cancel = function () {
+            scrollAnim.stop();
+            window.removeEventListener('wheel', cancel);
+            window.removeEventListener('touchstart', cancel);
+          };
+          window.addEventListener('wheel', cancel, { passive: true });
+          window.addEventListener('touchstart', cancel, { passive: true });
+          scrollAnim.then(cancel);
+        } else {
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
     });
   });
