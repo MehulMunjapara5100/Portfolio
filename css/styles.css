@@ -2913,3 +2913,456 @@ span.spotlight {
     margin-right: 0;
   }
 }
+
+/* ==================================================================
+   18) THEME-AWARE BASE FIXES (both themes)
+   ================================================================== */
+.header_toggle-bar {
+  background: var(--bg);
+}
+
+.btn,
+.hero-section_btn,
+.header_cta,
+.testimonial-cta,
+.contact-form__submit {
+  --btn-fg: var(--bg);
+}
+
+.btn:hover,
+.hero-section_btn:hover,
+.header_cta:hover,
+.testimonial-cta:hover,
+.contact-form__submit:hover:not(:disabled) {
+  --btn-fg: #fff;
+}
+
+.btn__icon,
+.header_cta-badge {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.hero-section_btn--secondary {
+  --btn-fg: var(--ink);
+}
+
+.hero-section_btn--secondary:hover {
+  --btn-fg: var(--ink);
+}
+
+.hero-section_btn--secondary .btn__icon {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.contact-form__submit-loader {
+  border-color: currentColor;
+  border-top-color: transparent;
+  opacity: 0.8;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.theme-toggle__icon {
+  grid-area: 1 / 1;
+  width: 19px;
+  height: 19px;
+}
+
+.theme-toggle__sun,
+[data-theme="dark"] .theme-toggle__moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__sun {
+  display: block;
+}
+
+.header-ghost .theme-toggle {
+  width: 40px;
+  height: 40px;
+  box-shadow: none;
+}
+
+@media (max-width: 1099px) {
+  .theme-toggle {
+    margin-left: auto;
+  }
+}
+
+/* Circular theme transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* ==================================================================
+   19) COMPONENTS
+   ================================================================== */
+
+/* Grain texture for a tactile, premium finish */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hero spotlight beam */
+.hero-section_spotlight {
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  z-index: -1;
+  width: min(1400px, 140vw);
+  height: 760px;
+  margin-left: max(-700px, -70vw);
+  background:
+    radial-gradient(ellipse 38% 50% at 50% 0%, rgba(91, 140, 255, 0.28), transparent 70%),
+    conic-gradient(from 180deg at 50% 0%, transparent 150deg, rgba(91, 140, 255, 0.12) 172deg, rgba(91, 140, 255, 0.2) 180deg, rgba(91, 140, 255, 0.12) 188deg, transparent 210deg);
+  filter: blur(8px);
+  pointer-events: none;
+  mask-image: linear-gradient(180deg, #000 40%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent);
+}
+
+/* Shimmer sweep on primary CTAs */
+.hero-section_btn--primary::before,
+.contact-form__submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.35) 48%, transparent 66%);
+  background-size: 250% 100%;
+  animation: btn-sheen 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-sheen {
+  0% { background-position: 120% 0; }
+  45%, 100% { background-position: -60% 0; }
+}
+
+.hero-section_btn--primary > *,
+.contact-form__submit > * {
+  position: relative;
+}
+
+/* Rotating light ring border */
+@property --ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.hero-section_image-wrapper::after,
+.testimonial-card--featured::after,
+.contact-info-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--ring-angle), transparent 0deg, transparent 250deg, var(--accent-2) 300deg, #fff 330deg, var(--accent) 345deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: ring-spin 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ring-spin {
+  to { --ring-angle: 360deg; }
+}
+
+/* Cursor-following glow border (pairs with span.spotlight) */
+.contact-form-card {
+  position: relative;
+  overflow: hidden;
+}
+
+span.glow-ring {
+  position: absolute !important;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), var(--accent-2), rgba(91, 140, 255, 0.35) 40%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
+}
+
+:is(.work-card, .benefit-card, .why-card, .expertise-card, .testimonial-card, .contact-info-card, .process-step_card, .contact-form-card):hover > span.glow-ring {
+  opacity: 1;
+}
+
+:is(.contact-form-card):hover > span.spotlight {
+  opacity: 1;
+}
+
+/* Tracing beam head on the process timeline */
+.process-section_track {
+  overflow: visible;
+}
+
+.process-section_track-fill {
+  position: relative;
+  border-radius: 2px;
+}
+
+.process-section_track-fill::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--accent), 0 0 18px 4px var(--accent-2);
+}
+
+/* Giant footer wordmark */
+.footer__wordmark {
+  margin-top: 8px;
+  margin-bottom: -0.2em;
+  font-family: var(--font-display);
+  font-size: min(calc((100vw - var(--gutter) * 2) / 6.1), 204px);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ==================================================================
+   20) DARK THEME
+   ================================================================== */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #06080d;
+  --bg-soft: #0e121b;
+  --surface: #0c1018;
+  --surface-2: #10151f;
+  --ink: #f3f5fa;
+  --ink-2: #c4cad7;
+  --muted: #8a93a8;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.12);
+
+  --accent: #3d7fff;
+  --accent-2: #7da6ff;
+  --accent-soft: rgba(61, 127, 255, 0.14);
+  --dark: #0b1222;
+  --dark-2: #0e1628;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3), 0 16px 40px -10px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.3), 0 40px 80px -20px rgba(0, 0, 0, 0.7);
+  --shadow-accent: 0 14px 36px -10px rgba(61, 127, 255, 0.6);
+}
+
+[data-theme="dark"] body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(61, 127, 255, 0.08), transparent 60%),
+    var(--bg);
+}
+
+[data-theme="dark"] body::after {
+  opacity: 0.05;
+}
+
+[data-theme="dark"] .header_logo-icon {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .header_nav-list {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .header_nav-link[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .header-ghost {
+  background: rgba(9, 12, 19, 0.72);
+  border-color: var(--line-strong);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Primary CTAs become luminous blue */
+[data-theme="dark"] .hero-section_btn--primary,
+[data-theme="dark"] .header_cta,
+[data-theme="dark"] .contact-form__submit,
+[data-theme="dark"] .testimonial-cta {
+  --btn-bg: linear-gradient(135deg, #5b8cff 0%, #2f6cf5 55%, #1e55d8 100%);
+  --btn-fg: #fff;
+  box-shadow: 0 0 0 1px rgba(125, 166, 255, 0.35) inset, 0 14px 34px -12px rgba(61, 127, 255, 0.75);
+}
+
+[data-theme="dark"] .hero-section_btn--primary .btn__icon,
+[data-theme="dark"] .header_cta-badge,
+[data-theme="dark"] .testimonial-cta .btn__icon {
+  background: #fff;
+  color: #1e55d8;
+}
+
+[data-theme="dark"] .hero-section_btn--secondary {
+  --btn-bg: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Headings get a subtle silver gradient */
+[data-theme="dark"] :is(h1, h2) .m-word__inner {
+  background: linear-gradient(180deg, #ffffff 35%, #a9b2c6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .hero-section_heading-stand-out .m-word__inner {
+  background: linear-gradient(100deg, #5b8cff 15%, #b8ccff 40%, #5b8cff 65%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .hero-section::after {
+  opacity: 0.35;
+}
+
+[data-theme="dark"] .hero-section_image-wrapper {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border-color: var(--line-strong);
+}
+
+[data-theme="dark"] .hero-section_image-wrapper::before {
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .benefit-card_visual img {
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Elevated "dark" cards stand out on the dark canvas */
+[data-theme="dark"] :is(.why-card--dark, .expertise-card--dark, .testimonial-card--featured) {
+  background: linear-gradient(160deg, #13244a 0%, #0b1222 55%);
+  border: 1px solid rgba(125, 166, 255, 0.18);
+}
+
+[data-theme="dark"] .contact-info-card {
+  border: 1px solid var(--line-strong);
+}
+
+/* Icons drawn in black need inverting */
+[data-theme="dark"] .process-step_icon svg,
+[data-theme="dark"] .expertise-card:not(.expertise-card--dark) .expertise-card_icon svg,
+[data-theme="dark"] .testimonial-trust-card__icon svg {
+  filter: invert(1) brightness(1.1);
+}
+
+[data-theme="dark"] .process-step.is-active .process-step_icon {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 6px var(--surface), 0 0 24px 2px rgba(61, 127, 255, 0.55);
+}
+
+[data-theme="dark"] .process-step.is-active .process-step_icon svg {
+  filter: invert(1) brightness(2);
+}
+
+[data-theme="dark"] .process-step.is-active .process-step_card {
+  border-color: rgba(125, 166, 255, 0.3);
+}
+
+[data-theme="dark"] .faq-item[open] .faq-item__icon::before,
+[data-theme="dark"] .faq-item[open] .faq-item__icon::after {
+  background: var(--bg);
+}
+
+[data-theme="dark"] .contact-form__select option {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .contact-form__input::placeholder,
+[data-theme="dark"] .contact-form__textarea::placeholder {
+  color: #566074;
+}
+
+[data-theme="dark"] .contact-form__select:invalid,
+[data-theme="dark"] .contact-form__select:has(option[value=""]:checked) {
+  color: #566074;
+}
+
+[data-theme="dark"] .contact-form__input,
+[data-theme="dark"] .contact-form__select,
+[data-theme="dark"] .contact-form__textarea {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .contact-info-card__arrow-btn {
+  color: #0a0f1c;
+}
+
+[data-theme="dark"] .contact-form__input:hover,
+[data-theme="dark"] .contact-form__select:hover,
+[data-theme="dark"] .contact-form__textarea:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+[data-theme="dark"] .contact-form__status-card--error {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .footer {
+  background: #04060a;
+  border-top: 1px solid var(--line);
+}
+
+[data-theme="dark"] span.spotlight {
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(91, 140, 255, 0.1), transparent 65%);
+}
+
+[data-theme="dark"] .work-card__tags li {
+  background: rgba(255, 255, 255, 0.03);
+}

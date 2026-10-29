@@ -34,9 +34,16 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#F4F5F8" />
+    <meta name="theme-color" content="#06080D" />
     <script>
       document.documentElement.classList.add("js");
+      (function () {
+        var theme = "dark";
+        try {
+          theme = localStorage.getItem("theme") || "dark";
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
     </script>
     <!-- @/head -->
     <link rel="stylesheet" href="./css/styles.css" />
@@ -78,6 +85,20 @@
               <li><a href="#faq" class="header_nav-link">FAQ</a></li>
             </ul>
           </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Toggle light and dark theme"
+          >
+            <svg class="theme-toggle__icon theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
           <a href="#contact" class="header_cta">
             <span>Let's talk</span>
             <span class="header_cta-badge">
@@ -138,6 +159,20 @@
             <li><a href="#faq" class="header_nav-link">FAQ</a></li>
           </ul>
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Toggle light and dark theme"
+        >
+          <svg class="theme-toggle__icon theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
         <a href="#contact" class="header_cta">
           <span>Let's talk</span>
           <span class="header_cta-badge">
@@ -231,6 +266,7 @@
     <!-- @/header -->
     <main id="main">
       <section class="hero-section" id="home">
+        <div class="hero-section_spotlight" aria-hidden="true"></div>
         <div class="container">
           <div
             class="hero-section_panel"
@@ -250,7 +286,9 @@
                   >Shopify stores</span
                 ><span class="hero-section_heading-line" data-animate="chars"
                   >built to
-                  <span class="hero-section_heading-stand-out"
+                  <span
+                    class="hero-section_heading-stand-out"
+                    data-flip-words="stand out|convert|scale|perform"
                     >stand out</span
                   ></span
                 >
@@ -2513,6 +2551,7 @@
             Designed &amp; built by Mehul Munjapara — Senior Shopify Developer.
           </p>
         </div>
+        <div class="footer__wordmark" aria-hidden="true">MUNJAPARA</div>
       </div>
     </footer>
     <!-- @/footer -->

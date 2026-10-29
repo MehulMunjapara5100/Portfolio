@@ -207,6 +207,32 @@
       .then(function () { settle([heroCard]); });
   }
 
+  var heroSpot = $('.hero-section_spotlight');
+  if (heroSpot) {
+    animate(heroSpot, { opacity: [0, 1], scaleX: [0.4, 1], y: [-80, 0] }, { duration: 1.8, delay: 0.1, ease: EASE });
+  }
+
+  // Flip words: cycles the accent phrase in the headline
+  var flipEl = $('[data-flip-words]');
+  if (flipEl) {
+    var phrases = flipEl.getAttribute('data-flip-words').split('|');
+    var flipIndex = 0;
+    var flipNext = function () {
+      if (document.hidden) return;
+      flipIndex = (flipIndex + 1) % phrases.length;
+      var old = $$('.m-word__inner', flipEl);
+      animate(old, { y: '-110%', opacity: 0, filter: 'blur(6px)' }, { duration: 0.35, ease: [0.4, 0, 1, 1] })
+        .then(function () {
+          flipEl.textContent = phrases[flipIndex];
+          var inners = splitWords(flipEl);
+          animate(inners, { y: ['110%', '0%'], opacity: [0, 1], filter: ['blur(6px)', 'blur(0px)'] }, {
+            type: 'spring', duration: 0.8, bounce: 0.2, delay: stagger(0.06)
+          });
+        });
+    };
+    setTimeout(function () { setInterval(flipNext, 3000); }, 2600);
+  }
+
   // Hero parallax as it scrolls away (uses the `translate` property so it
   // composes with transforms Motion applies)
   var hero = $('.hero-section');
@@ -339,6 +365,8 @@
 
   onEnter($$('.footer__left > *, .footer__pages-menu, .footer__bottom-wrapper'), { from: { y: 30 }, stagger: 0.08 });
 
+  onEnter($$('.footer__wordmark'), { from: { y: 120, blur: 12 }, duration: 1.6, amount: 0.3 });
+
   // Anything still using data-animate that wasn't handled above
   onEnter($$('[data-animate="fade-up"]').filter(function (el) {
     return !el.classList.contains('is-visible') && el.style.opacity !== '0';
@@ -413,8 +441,25 @@
   });
 
   // ---------------------------------------------------------------
-  // 11) PRESS FEEDBACK (touch + mouse)
+  // 11) THEME TOGGLE FEEDBACK
   // ---------------------------------------------------------------
+  var toggles = own($$('[data-theme-toggle]'));
+  document.addEventListener('themechange', function () {
+    toggles.forEach(function (t) {
+      animate($$('.theme-toggle__icon', t), { rotate: [-90, 0], scale: [0.4, 1] }, BOUNCY);
+    });
+  });
+
+  // ---------------------------------------------------------------
+  // 12) PRESS FEEDBACK (touch + mouse)
+  // ---------------------------------------------------------------
+  toggles.forEach(function (t) {
+    t.addEventListener('pointerdown', function () { animate(t, { scale: 0.88 }, SNAPPY); });
+    ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (evt) {
+      t.addEventListener(evt, function () { animate(t, { scale: 1 }, BOUNCY); });
+    });
+  });
+
   var pressables = own($$('.hero-section_btn, .header_cta, .testimonial-cta, .contact-form__submit, .contact-info-card__chat-btn, .btn'));
   pressables.forEach(function (btn) {
     btn.addEventListener('pointerdown', function () { animate(btn, { scale: 0.95 }, SNAPPY); });
@@ -424,7 +469,7 @@
   });
 
   // ---------------------------------------------------------------
-  // 12) POINTER INTERACTIONS (desktop only)
+  // 13) POINTER INTERACTIONS (desktop only)
   // ---------------------------------------------------------------
   if (!canHover) return;
 
@@ -448,13 +493,15 @@
     card.addEventListener('pointerleave', function () { animate(card, { y: 0 }, SMOOTH); });
   });
 
-  // Spotlight that follows the cursor across cards
-  $$('.work-card, .benefit-card, .why-card, .expertise-card, .testimonial-card, .contact-info-card, .process-step_card')
+  // Spotlight fill + glowing border that follow the cursor across cards
+  $$('.work-card, .benefit-card, .why-card, .expertise-card, .testimonial-card, .contact-info-card, .process-step_card, .contact-form-card')
     .forEach(function (card) {
-      var light = document.createElement('span');
-      light.className = 'spotlight';
-      light.setAttribute('aria-hidden', 'true');
-      card.appendChild(light);
+      ['spotlight', 'glow-ring'].forEach(function (cls) {
+        var span = document.createElement('span');
+        span.className = cls;
+        span.setAttribute('aria-hidden', 'true');
+        card.appendChild(span);
+      });
       card.addEventListener('pointermove', function (e) {
         var r = card.getBoundingClientRect();
         card.style.setProperty('--mx', (e.clientX - r.left) + 'px');

@@ -129,6 +129,43 @@
   });
 
   // =========================================================
+  // 1b) LIGHT / DARK THEME TOGGLE
+  // =========================================================
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    docEl.setAttribute('data-theme', theme);
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#06080D' : '#F4F5F8');
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('themechange', { detail: theme }));
+  }
+
+  if (docEl.getAttribute('data-theme') === 'light' && themeMeta) themeMeta.setAttribute('content', '#F4F5F8');
+
+  document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = docEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!document.startViewTransition || reduced) {
+        applyTheme(next);
+        return;
+      }
+      // Circular reveal of the new theme, expanding from the toggle
+      var r = btn.getBoundingClientRect();
+      var x = r.left + r.width / 2;
+      var y = r.top + r.height / 2;
+      var radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+      var transition = document.startViewTransition(function () { applyTheme(next); });
+      transition.ready.then(function () {
+        docEl.animate(
+          { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + radius + 'px at ' + x + 'px ' + y + 'px)'] },
+          { duration: 700, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', pseudoElement: '::view-transition-new(root)' }
+        );
+      });
+    });
+  });
+
+  // =========================================================
   // 2) WAVE-STAGGER & CHARACTER-SPLIT REVEAL ANIMATIONS
   // =========================================================
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
