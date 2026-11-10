@@ -31,16 +31,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/svg+xml" href="./assets/svg/m-icon.svg" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#06080D" />
+    <meta name="theme-color" content="#FAFAF8" />
     <script>
       document.documentElement.classList.add("js");
       (function () {
-        var theme = "dark";
+        var theme = "light";
         try {
-          theme = localStorage.getItem("theme") || "dark";
+          theme = localStorage.getItem("theme") || "light";
         } catch (e) {}
         document.documentElement.setAttribute("data-theme", theme);
       })();
@@ -266,7 +266,6 @@
     <!-- @/header -->
     <main id="main">
       <section class="hero-section" id="home">
-        <div class="hero-section_spotlight" aria-hidden="true"></div>
         <div class="container">
           <div
             class="hero-section_panel"
@@ -610,70 +609,71 @@
             </p>
           </div>
           <div class="work-grid work-grid--featured">
-            <!-- Project 01: Blind Tiger Coffee Roasters -->
-            <article class="work-card" data-item data-category="shopify-plus">
+            <!-- Project 01: RingTree Lighting -->
+            <article class="work-card" data-item data-category="landing-page">
               <div
                 class="work-media work-media--card"
-                style="--accent: #efe9df"
+                style="--accent: #e6ece6"
               >
                 <img
                   class="work-media__cover"
-                  src="./images/project-blindtiger.webp"
-                  alt="Blind Tiger Coffee Roasters Shopify Plus store"
+                  src="./images/project-ringtree.webp"
+                  alt="RingTree Lighting product landing page"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div class="work-card__body">
                 <div class="work-card__meta">
-                  <span class="pill">Shopify Plus</span>
-                  <span class="work-card__year">Specialty Coffee Roaster</span>
+                  <span class="pill">Landing Page</span>
+                  <span class="work-card__year">Holiday Lighting</span>
                 </div>
-                <h3 class="work-card__title">Blind Tiger Coffee Roasters</h3>
+                <h3 class="work-card__title">RingTree Lighting</h3>
                 <p class="work-card__text">
-                  A custom Shopify Plus storefront built for specialty coffee
-                  roasters featuring automated recurring subscriptions, custom
-                  Liquid product builders, and a 96 mobile PageSpeed score.
+                  A conversion-focused product landing page for a Canadian
+                  holiday lighting brand, pairing a full purchase flow with
+                  colour, tree-size and bundle selectors with a story-led
+                  layout, comparison tables, and social proof.
                 </p>
                 <ul class="work-card__tags">
-                  <li>Shopify Plus</li>
-                  <li>Subscriptions</li>
-                  <li>Custom Liquid</li>
-                  <li>Speed 96</li>
+                  <li>Landing Page</li>
+                  <li>Product Configurator</li>
+                  <li>Bundle Pricing</li>
+                  <li>CRO</li>
                 </ul>
               </div>
             </article>
 
-            <!-- Project 02: Cook's Union -->
-            <article class="work-card" data-item data-category="custom-theme">
+            <!-- Project 02: EcoFox Lifestyle -->
+            <article class="work-card" data-item data-category="store-redesign">
               <div
                 class="work-media work-media--card"
-                style="--accent: #e7eaf0"
+                style="--accent: #e2ece5"
               >
                 <img
                   class="work-media__cover"
-                  src="./images/project-cooksunion.webp"
-                  alt="Cook's Union culinary equipment store"
+                  src="./images/project-ecofox.webp"
+                  alt="EcoFox sustainable lifestyle store"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div class="work-card__body">
                 <div class="work-card__meta">
-                  <span class="pill">Custom Theme</span>
-                  <span class="work-card__year">Culinary & Kitchenware</span>
+                  <span class="pill">Store Redesign</span>
+                  <span class="work-card__year">Sustainable Living</span>
                 </div>
-                <h3 class="work-card__title">Cook's Union</h3>
+                <h3 class="work-card__title">EcoFox Lifestyle</h3>
                 <p class="work-card__text">
-                  Bespoke culinary equipment storefront converted pixel-perfect
-                  from Figma to Shopify, with faceted catalog filtering, smooth
-                  drawer carts, and wholesale B2B pricing.
+                  A high-converting redesign for an eco-conscious brand
+                  featuring modular bundle builders, sticky add-to-cart drawers,
+                  and a 98 PageSpeed score.
                 </p>
                 <ul class="work-card__tags">
-                  <li>Custom Theme</li>
-                  <li>Figma to Shopify</li>
-                  <li>Facet Filters</li>
-                  <li>B2B Portal</li>
+                  <li>Product Page Redesign</li>
+                  <li>Sticky Cart</li>
+                  <li>Bundle Logic</li>
+                  <li>PageSpeed 98</li>
                 </ul>
               </div>
             </article>
@@ -716,41 +716,7 @@
               </div>
             </article>
 
-            <!-- Project 04: EcoFox Lifestyle -->
-            <article class="work-card" data-item data-category="store-redesign">
-              <div
-                class="work-media work-media--card"
-                style="--accent: #e2ece5"
-              >
-                <img
-                  class="work-media__cover"
-                  src="./images/project-ecofox.webp"
-                  alt="EcoFox sustainable lifestyle store"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="work-card__body">
-                <div class="work-card__meta">
-                  <span class="pill">Store Redesign</span>
-                  <span class="work-card__year">Sustainable Living</span>
-                </div>
-                <h3 class="work-card__title">EcoFox Lifestyle</h3>
-                <p class="work-card__text">
-                  A high-converting redesign for an eco-conscious brand
-                  featuring modular bundle builders, sticky add-to-cart drawers,
-                  and a 98 PageSpeed score.
-                </p>
-                <ul class="work-card__tags">
-                  <li>Product Page Redesign</li>
-                  <li>Sticky Cart</li>
-                  <li>Bundle Logic</li>
-                  <li>PageSpeed 98</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Project 05: Metpure Water Filtration -->
+            <!-- Project 04: Metpure Water Filtration -->
             <article class="work-card" data-item data-category="b2b-and-d2c">
               <div
                 class="work-media work-media--card"
@@ -780,6 +746,40 @@
                   <li>Quantity Breaks</li>
                   <li>Quick Order</li>
                   <li>Spec Sheets</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 05: Blind Tiger Coffee Roasters -->
+            <article class="work-card" data-item data-category="shopify-plus">
+              <div
+                class="work-media work-media--card"
+                style="--accent: #efe9df"
+              >
+                <img
+                  class="work-media__cover"
+                  src="./images/project-blindtiger.webp"
+                  alt="Blind Tiger Coffee Roasters Shopify Plus store"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span class="pill">Shopify Plus</span>
+                  <span class="work-card__year">Specialty Coffee Roaster</span>
+                </div>
+                <h3 class="work-card__title">Blind Tiger Coffee Roasters</h3>
+                <p class="work-card__text">
+                  A custom Shopify Plus storefront built for specialty coffee
+                  roasters featuring automated recurring subscriptions, custom
+                  Liquid product builders, and a 96 mobile PageSpeed score.
+                </p>
+                <ul class="work-card__tags">
+                  <li>Shopify Plus</li>
+                  <li>Subscriptions</li>
+                  <li>Custom Liquid</li>
+                  <li>Speed 96</li>
                 </ul>
               </div>
             </article>

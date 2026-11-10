@@ -135,12 +135,12 @@
 
   function applyTheme(theme) {
     docEl.setAttribute('data-theme', theme);
-    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#06080D' : '#F4F5F8');
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#0B1120' : '#FAFAF8');
     try { localStorage.setItem('theme', theme); } catch (e) {}
     document.dispatchEvent(new CustomEvent('themechange', { detail: theme }));
   }
 
-  if (docEl.getAttribute('data-theme') === 'light' && themeMeta) themeMeta.setAttribute('content', '#F4F5F8');
+  if (docEl.getAttribute('data-theme') === 'dark' && themeMeta) themeMeta.setAttribute('content', '#0B1120');
 
   document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
